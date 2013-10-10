@@ -9,19 +9,30 @@ body { -webkit-box-shadow: inset #FD7173 0 0 0 10px; }
 #score { position: fixed; top: 31px; right: 31px; }
 
 #game { width: 426px; height: 276px; margin: 0 auto; padding-bottom: 40px; }
-#game .button { cursor: pointer; position: absolute; width: 130px; height: 131px; background: url("../img/buttons.png") top left no-repeat; float: left; }
+#game .button { cursor: pointer; position: absolute; width: 142px; height: 142px; background: url("../img/button_sprite.png") top left no-repeat; float: left; background-size: 300% 500%; }
 #game .row { width: 100%; height: 131px;  position: relative; margin-bottom: 14px; }
 
-#game .one { bottom: 0px; left: 0px; }
-#game .two { bottom: 0px; left: 141px; }
-#game .three { bottom: 0px; left: 282px; }
+#game .button:hover { background-position: -142px 0px; }
+#game .button:active { background-position: -284px 0px; }
+#game .button.active { background-position: 0px -142px; }
+#game .active:hover { background-position: -142px -142px; }
+#game .active.open { background-position: -284px -142px; }
+#game .active.close { background-position: 0px -284px; }
+#game .wrong.crying { background-position: -142px -284px; }
+#game .wrong.artist { background-position: -284px -284px; }
+#game .wrong.artist:hover { background-position: 0px -246px; }
+#game .wrong.artist:active { background-position: -142px -142px; }
 
+/*#game .hover { bottom: 0px; left: 0px; }
+#game .activate { bottom: 0px; left: 141px; }
+#game .active { bottom: 0px; left: 282px; }
+#game .active
 #game .button:hover { background-position: -131px 0px; }
 #game .button:active { width: 112px; height: 112px; background: #FD7779; border: 5px solid black; margin-top: 9px; margin-right: 27px; }
-#game .button.active { background-position: 0px -132px; margin-right: 17px; }
+#game .button.active { background-position: 0px -132px; margin-right: 17px; }*/
 
-#game .button.right { background-position: 0px -263px; }
-#game .button.right.blink { background-position: -131px -132px; }
+/*#game .button.right { background-position: 0px -263px; }
+#game .button.right.blink { background-position: -131px -132px; }*/
 
 #gameover { width: 488px; margin: 0 auto; }
 #gameover .message p { width: 488px; text-align: center; margin-bottom: 30px; }

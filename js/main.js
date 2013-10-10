@@ -23,7 +23,7 @@ $(document).ready(function() {
 		$(".active").removeClass("active");
 		$(this).addClass("active");
 
-		setTimeout( blink, 100 );
+		//setTimeout( blink, 100 );
 	});
 
 	
