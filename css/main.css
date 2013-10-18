@@ -1,27 +1,37 @@
 html, body { width: 100%; height: 100%; overflow: hidden; background: #D3FFF4 url("../img/bgtile.jpg") top left repeat; }
 body { -webkit-box-shadow: inset #FD7173 0 0 0 10px; }
 
+* 
+
 #wrapper {}
 
 #social { position: fixed; top: 31px; left: 31px; }
 #social a { margin-right: 14px; }
-#logo { padding-top: 31px; padding-bottom: 25px; width: 321px; height: 144px; margin: 0 auto; }
+#logo { padding-top: 31px; padding-bottom: 25px; width: calc(816px / 2); height: calc(309px / 2 ); margin: 0 auto; }
+#logo img { width: 100%; height: 100%; }
 #score { position: fixed; top: 31px; right: 31px; }
 
-#game { width: 426px; height: 276px; margin: 0 auto; padding-bottom: 40px; }
-#game .button { cursor: pointer; position: absolute; width: 142px; height: 142px; background: url("../img/button_sprite.png") top left no-repeat; float: left; background-size: 300% 500%; }
-#game .row { width: 100%; height: 131px;  position: relative; margin-bottom: 14px; }
+#game { width: 462px; height: 276px; margin: 0 auto; padding: 50px 0px 40px 11px; }
+#game .row { width: 100%; height: 142px;  position: relative; margin-bottom: 14px; }
 
-#game .button:hover { background-position: -142px 0px; }
-#game .button:active { background-position: -284px 0px; }
-#game .button.active { background-position: 0px -142px; }
-#game .active:hover { background-position: -142px -142px; }
-#game .active.open { background-position: -284px -142px; }
-#game .active.close { background-position: 0px -284px; }
-#game .wrong.crying { background-position: -142px -284px; }
-#game .wrong.artist { background-position: -284px -284px; }
-#game .wrong.artist:hover { background-position: 0px -246px; }
-#game .wrong.artist:active { background-position: -142px -142px; }
+#game .button { cursor: pointer; position: absolute; width: 142px; height: 142px; background: url("../img/button_sprite.png") top left no-repeat; float: left; background-size: 300% 500%;  background-position: 0px 0px; }
+
+#game .button:hover { background-position: calc(-142px * 1) calc(-142px * 0); }
+#game .button:active { background-position: calc(-142px * 2) calc(-142px * 0); }
+#game .button.active { background-position: calc(-142px * 0) calc(-142px * 1); }
+
+#game .active:hover { background-position: calc(-142px * 1) calc(-142px * 1); }
+#game .active.open { background-position: calc(-142px * 2) calc(-142px * 1); }
+#game .active.close { background-position: calc(-142px * 0) calc(-142px * 2); }
+
+#game .wrong.crying { background-position: calc(-142px * 1) calc(-142px * 2); }
+#game .wrong.artist { background-position: calc(-142px * 2) calc(-142px * 2); }
+#game .wrong.artist:hover { background-position: calc(-142px * 0) calc(-142px * 2); }
+#game .wrong.artist:active { background-position: calc(-142px * 1) calc(-142px * 1); }
+
+#game .one { left: -webkit-calc((142px + 17px) * 0); }
+#game .two { left: -webkit-calc((142px + 17px) * 1); }
+#game .three { left: -webkit-calc((142px + 17px) * 2); }
 
 /*#game .hover { bottom: 0px; left: 0px; }
 #game .activate { bottom: 0px; left: 141px; }
@@ -34,8 +44,13 @@ body { -webkit-box-shadow: inset #FD7173 0 0 0 10px; }
 /*#game .button.right { background-position: 0px -263px; }
 #game .button.right.blink { background-position: -131px -132px; }*/
 
-#gameover { width: 488px; margin: 0 auto; }
+#gameover { width: 488px; margin: 0 auto; display: none; }
 #gameover .message p { width: 488px; text-align: center; margin-bottom: 30px; }
 #gameover .message .lost { display: none; }
 #gameover .playshare { width: 385px; margin: 0 auto; }
 #gameover .playshare .first { margin-right: 33px; }
+
+#answer { width: 450px; height: 56px; margin: 0 auto; background-color: #FD7779; box-sizing: border-box; padding: 13px; }
+#answer input { background-color: #FFFEBF; border: none; display: block; width: 218px;  height: 30px; box-sizing: border-box; outline: none; font: bold 13px Helvetica; text-transform: uppercase; color: #FD7779; float: left; margin-right: 13px; text-align: center; }
+#answer input.button { width: 90px; cursor: pointer; }
+#answer input.noclue { margin-right: 0px; }
