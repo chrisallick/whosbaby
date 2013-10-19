@@ -11,7 +11,7 @@ body { -webkit-box-shadow: inset #FD7173 0 0 0 10px; }
 #logo img { width: 100%; height: 100%; }
 #score { position: fixed; top: 31px; right: 31px; }
 
-#game { width: 462px; height: 276px; margin: 0 auto; padding: 50px 0px 40px 11px; }
+#game { width: 462px; height: 276px; margin: 0 auto; padding: 50px 0px 70px 11px; }
 #game .row { width: 100%; height: 142px;  position: relative; margin-bottom: 14px; }
 
 #game .button { cursor: pointer; position: absolute; width: 142px; height: 142px; background: url("../img/button_sprite.png") top left no-repeat; float: left; background-size: 300% 500%;  background-position: 0px 0px; }
@@ -30,29 +30,23 @@ body { -webkit-box-shadow: inset #FD7173 0 0 0 10px; }
 #game .wrong.artist:hover { background-position: calc(-142px * 0) calc(-142px * 2); }
 #game .wrong.artist:active { background-position: calc(-142px * 1) calc(-142px * 1); }
 
+#game .right { background-position: calc(-142px * 0) calc(-142px * 4); }
+#game .right:hover { background-position: calc(-142px * 1) calc(-142px * 4); }
+#game .right:active { background-position: calc(-142px * 2) calc(-142px * 4); }
+#game .right.blink { background-position: calc(-142px * 2) calc(-142px * 3); }
+
 #game .one { left: -webkit-calc((142px + 17px) * 0); }
 #game .two { left: -webkit-calc((142px + 17px) * 1); }
 #game .three { left: -webkit-calc((142px + 17px) * 2); }
 
-/*#game .hover { bottom: 0px; left: 0px; }
-#game .activate { bottom: 0px; left: 141px; }
-#game .active { bottom: 0px; left: 282px; }
-#game .active
-#game .button:hover { background-position: -131px 0px; }
-#game .button:active { width: 112px; height: 112px; background: #FD7779; border: 5px solid black; margin-top: 9px; margin-right: 27px; }
-#game .button.active { background-position: 0px -132px; margin-right: 17px; }*/
-
-/*#game .button.right { background-position: 0px -263px; }
-#game .button.right.blink { background-position: -131px -132px; }*/
-
-#gameover { width: 488px; margin: 0 auto; display: none; }
+#gameover { width: 488px; margin: 0 auto; display: none;  }
 #gameover .message p { width: 488px; text-align: center; margin-bottom: 30px; }
 #gameover .message .lost { display: none; }
 #gameover .playshare { width: 385px; margin: 0 auto; }
 #gameover .playshare .first { margin-right: 33px; }
 
 #answer { width: 450px; height: 56px; margin: 0 auto; background-color: #FD7779; box-sizing: border-box; padding: 13px; }
-#answer input { background-color: #FFFEBF; border: none; display: block; width: 218px;  height: 30px; box-sizing: border-box; outline: none; font: bold 13px Helvetica; text-transform: uppercase; color: rgba(253,119,121,1); float: left; margin-right: 13px; text-align: center; }
+#answer input { background-color: #FFFEBF; border: none; display: block; width: 218px;  height: 30px; box-sizing: border-box; outline: none; font: 800 13px "futura-pt"; text-transform: uppercase; color: rgba(253,119,121,1); float: left; margin-right: 13px; text-align: center; }
 #answer input.blink { color: rgba(253,119,121,.4); }
 #answer input.button { width: 90px; cursor: pointer; }
 #answer input.noclue { margin-right: 0px; }
