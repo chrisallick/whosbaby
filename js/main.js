@@ -4,7 +4,10 @@ var clips = [
 	"black-eyed-peas-dont-phunk-with-my-heart-cut",
 	"britney-spears_baby-one-more-time_cut",
 	"britney-spears-im-a-slave-4-u-cut",
-	"britney-spears-till-the-world-ends-cut"
+	"britney-spears-till-the-world-ends-cut",
+	"correct",
+	"wrong",
+	"crying"
 ];
 
 var answers = [
@@ -13,7 +16,10 @@ var answers = [
 	"black eyed peas",
 	"britney spears",
 	"britney spears",
-	"britney spears"
+	"britney spears",
+	"",
+	"",
+	""
 ];
 
 ClipPlayer = function( _clips, _answers, _onLoad ) {
@@ -47,7 +53,7 @@ ClipPlayer = function( _clips, _answers, _onLoad ) {
 
     		self.audioClips[i]["clip"].addEventListener('ended', function() {
 				playing--;
-				if( !playing ) {
+				if( !playing && i < 6 ) {
 					blinkGuess();
 				}
     			
@@ -91,9 +97,15 @@ function blinkGuess() {
 	}		
 }
 
+/*
+	don't blink anything but the right answers
+	only count first try
+*/
+
 var t, blinkCount = 0, cp, playing = 0;
 var currentSong = -1;
 var score = 0;
+var tries = 0;
 $(document).ready(function() {
 
 	cp = new ClipPlayer( clips, answers, function(){
@@ -120,20 +132,29 @@ $(document).ready(function() {
 	})
 
 	$("#answer").submit(function(event) {
+		tries++;
 		if( currentSong != -1 ) {
 			if( $("#guess").val().toLowerCase() == cp.audioClips[currentSong]["answer"].toLowerCase() ) {
 				console.log("awesome");
 				$(".active").removeClass("active").addClass("right");
 				score++;
-				if( score == 6) {
-					$("#answer").fadeOut(function(){
-						$("#gameover").fadeIn();
-					});
-				}
+				cp.play(6);
 				blinkRight();
 			} else {
+				cp.play(7);
+				setTimeout(function(){
+					cp.play(8);
+				}, 700);
 				$(".active").removeClass("active").addClass("wrong crying");
 			}			
+		}
+
+		$("#score p").text( score + "/" + tries );
+
+		if( tries == 6) {
+			$("#answer").fadeOut(function(){
+				$("#gameover").fadeIn();
+			});
 		}
 
 		return false;
