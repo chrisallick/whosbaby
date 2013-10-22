@@ -11,15 +11,15 @@ var clips = [
 ];
 
 var answers = [
-	"adele",
-	"backstreet boys",
-	"black eyed peas",
-	"britney spears",
-	"britney spears",
-	"britney spears",
-	"correct",
-	"wrong",
-	"crying"
+	["adele"],
+	["backstreet boys", "back street boys"],
+	["black eyed peas"],
+	["britney spears"],
+	["britney spears"],
+	["britney spears"],
+	["correct"],
+	["wrong"],
+	["crying"]
 ];
 
 ClipPlayer = function( _clips, _answers, _onLoad ) {
@@ -177,7 +177,9 @@ $(document).ready(function() {
 	$("#answer").submit(function(event) {
 		tries++;
 		if( currentSong != -1 && cp.audioClips[currentSong]["tried"] == false ) {
-			if( $("#guess").val().toLowerCase() == cp.audioClips[currentSong]["answer"].toLowerCase() ) {
+			console.log( cp.audioClips[currentSong]["answer"].indexOf($("#guess").val().toLowerCase()) );
+			if( cp.audioClips[currentSong]["answer"].indexOf($("#guess").val().toLowerCase()) >= 0 ) {
+			//if( $("#guess").val().toLowerCase() == cp.audioClips[currentSong]["answer"].toLowerCase() ) {
 				rightAnswer();
 			} else {
 				wrongAnswer();
