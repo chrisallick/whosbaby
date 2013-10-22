@@ -99,6 +99,36 @@ function blinkGuess() {
 	}		
 }
 
+function rightAnswer() {
+	$(".active").removeClass("active").addClass("right");
+	score++;
+	cp.play(6);
+	blinkRight();
+}
+
+function wrongAnswer() {
+	cp.play(7);
+	setTimeout(function(){
+		cp.play(8);
+	}, 700);
+	$(".active").removeClass("active").addClass("wrong crying");
+}
+
+function checkScore() {
+	$("#score p").text( score + "/" + tries );
+
+	if( tries == 6) {
+		$("#answer").fadeOut(function(){
+			if( score < 6 ) {
+				$("#gameover .won").hide();
+				$("#gameover .lost").show();
+			}
+
+			$("#gameover").fadeIn();
+		});
+	}
+}
+
 /*
 	don't blink anything but the right answers
 	only count first try
@@ -136,37 +166,25 @@ $(document).ready(function() {
 
 	$("#enter").click(function(){
 		$("#answer").submit();
-	})
+	});
+
+	$("#noclue").click(function(){
+		wrongAnswer();
+
+		checkScore();
+	});
 
 	$("#answer").submit(function(event) {
 		tries++;
 		if( currentSong != -1 && cp.audioClips[currentSong]["tried"] == false ) {
 			if( $("#guess").val().toLowerCase() == cp.audioClips[currentSong]["answer"].toLowerCase() ) {
-				$(".active").removeClass("active").addClass("right");
-				score++;
-				cp.play(6);
-				blinkRight();
+				rightAnswer();
 			} else {
-				cp.play(7);
-				setTimeout(function(){
-					cp.play(8);
-				}, 700);
-				$(".active").removeClass("active").addClass("wrong crying");
-			}			
+				wrongAnswer();
+			}
 		}
 
-		$("#score p").text( score + "/" + tries );
-
-		if( tries == 6) {
-			$("#answer").fadeOut(function(){
-				if( score < 6 ) {
-					$("#gameover .won").hide();
-					$("#gameover .lost").show();
-				}
-
-				$("#gameover").fadeIn();
-			});
-		}
+		checkScore();
 
 		return false;
 	});
