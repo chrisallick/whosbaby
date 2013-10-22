@@ -170,7 +170,6 @@ $(document).ready(function() {
 
 	$("#noclue").click(function(){
 		wrongAnswer();
-
 		checkScore();
 	});
 
@@ -179,7 +178,6 @@ $(document).ready(function() {
 		if( currentSong != -1 && cp.audioClips[currentSong]["tried"] == false ) {
 			console.log( cp.audioClips[currentSong]["answer"].indexOf($("#guess").val().toLowerCase()) );
 			if( cp.audioClips[currentSong]["answer"].indexOf($("#guess").val().toLowerCase()) >= 0 ) {
-			//if( $("#guess").val().toLowerCase() == cp.audioClips[currentSong]["answer"].toLowerCase() ) {
 				rightAnswer();
 			} else {
 				wrongAnswer();

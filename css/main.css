@@ -13,7 +13,7 @@ body { -webkit-box-shadow: inset #FD7173 0 0 0 10px; }
 #game { width: 462px; height: 276px; margin: 0 auto; padding: 50px 0px 70px 11px; }
 #game .row { width: 100%; height: 142px;  position: relative; margin-bottom: 14px; }
 
-#game .button { cursor: pointer; position: absolute; width: 142px; height: 142px; background: url("../img/button_sprite.png") top left no-repeat; float: left; background-size: 300% 500%;  background-position: 0px 0px; }
+#game .button { cursor: pointer; position: absolute; width: 142px; height: 142px; background: url("../img/button_sprite.png") top left no-repeat; background-size: 300% 500%;  background-position: 0px 0px; }
 
 #game .button:hover { background-position: calc(-142px * 1) calc(-142px * 0); }
 #game .button:active { background-position: calc(-142px * 2) calc(-142px * 0); }
@@ -31,11 +31,15 @@ body { -webkit-box-shadow: inset #FD7173 0 0 0 10px; }
 
 #game .right { background-position: calc(-142px * 0) calc(-142px * 4); }
 #game .complete { background-position: calc(-142px * 0) calc(-142px * 4); }
-#game .complete:hover { background-position: calc(-142px * 0) calc(-142px * 4); }
-#game .complete:active { background-position: calc(-142px * 0) calc(-142px * 4); }
+#game .complete:hover { background-position: calc(-142px * 1) calc(-142px * 4); }
+#game .complete:active { background-position: calc(-142px * 2) calc(-142px * 4); }
 #game .right:hover { background-position: calc(-142px * 1) calc(-142px * 4); }
 #game .right:active { background-position: calc(-142px * 2) calc(-142px * 4); }
 #game .right.blink { background-position: calc(-142px * 2) calc(-142px * 3); }
+
+#game .right .artist, #game .complete .artist { width: 121px; height: 121px; background: url("../img/artists.png") top left no-repeat; background-size: 200% 4000%; background-position: 0px 0px; position: absolute; bottom: 20px; left: 21px; }
+#game .right:hover .artist, #game .complete:hover .artist { background-position: -121px 0px; left: 18px; }
+#game .right:active .artist, #game .complete:active .artist { bottom: 7px; left: 6px; }
 
 #game .one { left: -webkit-calc((142px + 17px) * 0); }
 #game .two { left: -webkit-calc((142px + 17px) * 1); }
