@@ -17,9 +17,9 @@ var answers = [
 	"britney spears",
 	"britney spears",
 	"britney spears",
-	"",
-	"",
-	""
+	"correct",
+	"wrong",
+	"crying"
 ];
 
 ClipPlayer = function( _clips, _answers, _onLoad ) {
@@ -31,8 +31,10 @@ ClipPlayer = function( _clips, _answers, _onLoad ) {
 
     this.onLoad = _onLoad;
     this.loaded = 0;
+    this.lastPlayed = -1;
  
     this.play = function( clip ) {
+    	self.lastPlayed = clip;
     	self.audioClips[clip]["clip"].load();
     	self.audioClips[clip]["clip"].play();
     	playing++;
@@ -42,6 +44,7 @@ ClipPlayer = function( _clips, _answers, _onLoad ) {
     	for( var i = 0, len = self.clips.length; i < len; i++ ) {
     		self.audioClips[i] = {};
     		self.audioClips[i]["clip"] = new Audio('./audio/' + self.clips[i] + '.mp3');
+    		self.audioClips[i]["tried"] = false;
     		self.audioClips[i]["answer"] = self.answers[i];
 
     		self.audioClips[i]["clip"].addEventListener('canplaythrough', function() {
@@ -53,10 +56,11 @@ ClipPlayer = function( _clips, _answers, _onLoad ) {
 
     		self.audioClips[i]["clip"].addEventListener('ended', function() {
 				playing--;
-				if( !playing && i < 6 ) {
-					blinkGuess();
+				if( !playing ) {
+					if( self.lastPlayed < 6 ) {
+						blinkGuess();	
+					}
 				}
-    			
     		}, false);
     	}
     }
@@ -68,8 +72,7 @@ function blinkRight() {
 	clearTimeout( t );
 	blinkCount++;
 	if( blinkCount > 10 ) {
-		clearTimeout( t );
-		$(".right").removeClass("blink");
+		$(".right").removeClass("blink right").addClass("complete");
 		blinkCount = 0;
 	} else {
 		if( blinkCount % 2 == 0 ) {
@@ -85,7 +88,6 @@ function blinkGuess() {
 	clearTimeout( t );
 	blinkCount++;
 	if( blinkCount > 4 ) {
-		clearTimeout( t );
 		$("#guess").removeClass("blink");
 	} else {
 		if( blinkCount % 2 == 0 ) {
@@ -113,15 +115,16 @@ $(document).ready(function() {
 	});
 
 	$("#game .button").click(function() {
-		if( !$(this).hasClass("right") && !$(this).hasClass("wrong") ) {
-			$(".active").removeClass("active");
-			$(this).addClass("active");
-
+		if( !$(this).hasClass("right") && !$(this).hasClass("wrong") && !$(this).hasClass("complete") ) {
 			var index = $(this).attr("id");
-			currentSong = index;
-			cp.play( index );			
-		}
+			if( cp.audioClips[index]["tried"] == false ) {
+				currentSong = index;
+				cp.play( index );
 
+				$(".active").removeClass("active");
+				$(this).addClass("active");
+			}
+		}
 	});	
 
 	$("#guess").click(function() {
@@ -129,13 +132,16 @@ $(document).ready(function() {
 		if( currentSong != -1 ) {
 			$(this).val("");
 		}
+	});
+
+	$("#enter").click(function(){
+		$("#answer").submit();
 	})
 
 	$("#answer").submit(function(event) {
 		tries++;
-		if( currentSong != -1 ) {
+		if( currentSong != -1 && cp.audioClips[currentSong]["tried"] == false ) {
 			if( $("#guess").val().toLowerCase() == cp.audioClips[currentSong]["answer"].toLowerCase() ) {
-				console.log("awesome");
 				$(".active").removeClass("active").addClass("right");
 				score++;
 				cp.play(6);
@@ -153,6 +159,11 @@ $(document).ready(function() {
 
 		if( tries == 6) {
 			$("#answer").fadeOut(function(){
+				if( score < 6 ) {
+					$("#gameover .won").hide();
+					$("#gameover .lost").show();
+				}
+
 				$("#gameover").fadeIn();
 			});
 		}

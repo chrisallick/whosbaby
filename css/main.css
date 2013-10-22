@@ -30,6 +30,9 @@ body { -webkit-box-shadow: inset #FD7173 0 0 0 10px; }
 #game .wrong.artist:active { background-position: calc(-142px * 1) calc(-142px * 1); }
 
 #game .right { background-position: calc(-142px * 0) calc(-142px * 4); }
+#game .complete { background-position: calc(-142px * 0) calc(-142px * 4); }
+#game .complete:hover { background-position: calc(-142px * 0) calc(-142px * 4); }
+#game .complete:active { background-position: calc(-142px * 0) calc(-142px * 4); }
 #game .right:hover { background-position: calc(-142px * 1) calc(-142px * 4); }
 #game .right:active { background-position: calc(-142px * 2) calc(-142px * 4); }
 #game .right.blink { background-position: calc(-142px * 2) calc(-142px * 3); }
@@ -44,8 +47,16 @@ body { -webkit-box-shadow: inset #FD7173 0 0 0 10px; }
 #gameover .playshare { width: 385px; margin: 0 auto; }
 #gameover .playshare .first { margin-right: 33px; }
 
-#answer { width: 450px; height: 56px; margin: 0 auto; background-color: #FD7779; box-sizing: border-box; padding: 13px; }
-#answer input { background-color: #FFFEBF; border: none; display: block; width: 218px;  height: 30px; box-sizing: border-box; outline: none; font: 800 13px "futura-pt"; text-transform: uppercase; color: rgba(253,119,121,1); float: left; margin-right: 13px; text-align: center; }
+#answer { position: relative; width: 450px; height: 56px; margin: 0 auto; background-color: #FD7779; box-sizing: border-box; padding: 13px; }
+#answer input { background-color: #FBF7BE; border: none; display: block; width: 218px; height: 30px; box-sizing: border-box; outline: none; font: 800 13px "futura-pt"; text-transform: uppercase; color: rgba(253,119,121,1); text-align: center; }
 #answer input.blink { color: rgba(253,119,121,.4); }
-#answer input.button { width: 90px; cursor: pointer; }
-#answer input.noclue { margin-right: 0px; }
+
+#answer .button { position: absolute; top: 7px; left: 0px; height: 37px; width: 96px; cursor: pointer; background: url("../img/answer_sprite.png") top left no-repeat; background-size: 300% 200%; }
+
+#answer #enter { background-position: 0px 0px; left: 244px; }
+#answer #enter:hover { background-position: -96px 0px; }
+#answer #enter:active { background-position: -193px 0px; }
+
+#answer #noclue { background-position: 0px -37px; left: 348px; margin-right: 0px; }
+#answer #noclue:hover { background-position: -96px -37px; }
+#answer #noclue:active { background-position: -193px -37px; }
