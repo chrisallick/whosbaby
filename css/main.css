@@ -51,9 +51,11 @@ body { -webkit-box-shadow: inset #FD7173 0 0 0 10px; }
 #gameover .playshare { width: 385px; margin: 0 auto; }
 #gameover .playshare .first { margin-right: 33px; }
 
-#answer { position: relative; width: 450px; height: 56px; margin: 0 auto; background-color: #FD7779; box-sizing: border-box; padding: 13px; }
-#answer input { background-color: #FBF7BE; border: none; display: block; width: 218px; height: 30px; box-sizing: border-box; outline: none; font: 800 13px "futura-pt"; text-transform: uppercase; color: rgba(253,119,121,1); text-align: center; }
-#answer input.blink { color: rgba(253,119,121,.4); }
+#answer { position: relative; width: 450px; height: 56px; margin: 0 auto; background-color: #FD7779; box-sizing: border-box; }
+#answer input { background-color: #FBF7BE; display: block; width: 218px; height: 30px; box-sizing: conent-box; font: 700 14px "futura-pt"; text-transform: uppercase; color: rgba(253,119,121,1); text-align: center; outline: none; border: none; position: absolute; top: 13px; left: 13px; }
+#answer input::-webkit-input-placeholder { color: rgba(253,119,121,1); }
+#answer input.blink { border: 5px solid #56C2D2; top: 8px; left: 8px; }
+#answer input.active { border: 5px solid #56C2D2; top: 8px; left: 8px; }
 
 #answer .button { position: absolute; top: 7px; left: 0px; height: 37px; width: 96px; cursor: pointer; background: url("../img/answer_sprite.png") top left no-repeat; background-size: 300% 200%; }
 

@@ -13,7 +13,7 @@ var clips = [
 var answers = [
 	["adele"],
 	["backstreet boys", "back street boys"],
-	["black eyed peas"],
+	["black eyed peas", "blackeyed peas"],
 	["britney spears"],
 	["britney spears"],
 	["britney spears"],
@@ -58,7 +58,7 @@ ClipPlayer = function( _clips, _answers, _onLoad ) {
 				playing--;
 				if( !playing ) {
 					if( self.lastPlayed < 6 ) {
-						blinkGuess();	
+						blinkGuess();
 					}
 				}
     		}, false);
@@ -87,8 +87,9 @@ function blinkRight() {
 function blinkGuess() {
 	clearTimeout( t );
 	blinkCount++;
-	if( blinkCount > 4 ) {
-		$("#guess").removeClass("blink");
+	if( blinkCount > 6 ) {
+		$("#guess").removeClass("blink").addClass("active");
+		blinkCount = 0;
 	} else {
 		if( blinkCount % 2 == 0 ) {
 			$("#guess").addClass("blink");
@@ -115,6 +116,8 @@ function wrongAnswer() {
 }
 
 function checkScore() {
+	tries++;
+
 	$("#score p").text( score + "/" + tries );
 
 	if( tries == 6) {
@@ -138,6 +141,7 @@ var t, blinkCount = 0, cp, playing = 0;
 var currentSong = -1;
 var score = 0;
 var tries = 0;
+var justTried = true;
 $(document).ready(function() {
 
 	cp = new ClipPlayer( clips, answers, function(){
@@ -148,6 +152,8 @@ $(document).ready(function() {
 		if( !$(this).hasClass("right") && !$(this).hasClass("wrong") && !$(this).hasClass("complete") ) {
 			var index = $(this).attr("id");
 			if( cp.audioClips[index]["tried"] == false ) {
+				$("#guess").removeClass("active");
+				justTried = false;
 				currentSong = index;
 				cp.play( index );
 
@@ -165,16 +171,22 @@ $(document).ready(function() {
 	});
 
 	$("#enter").click(function(){
-		$("#answer").submit();
+		if( !justTried ) {
+			justTried = true;
+			$("#answer").submit();
+		}
 	});
 
 	$("#noclue").click(function(){
-		wrongAnswer();
-		checkScore();
+		if( !justTried) {
+			justTried = true;
+			wrongAnswer();
+			checkScore();	
+		}
+		
 	});
 
 	$("#answer").submit(function(event) {
-		tries++;
 		if( currentSong != -1 && cp.audioClips[currentSong]["tried"] == false ) {
 			console.log( cp.audioClips[currentSong]["answer"].indexOf($("#guess").val().toLowerCase()) );
 			if( cp.audioClips[currentSong]["answer"].indexOf($("#guess").val().toLowerCase()) >= 0 ) {
