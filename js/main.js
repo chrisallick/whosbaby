@@ -188,7 +188,7 @@ $(document).ready(function() {
 
 	$("#answer").submit(function(event) {
 		if( currentSong != -1 && cp.audioClips[currentSong]["tried"] == false ) {
-			console.log( cp.audioClips[currentSong]["answer"].indexOf($("#guess").val().toLowerCase()) );
+			//console.log( cp.audioClips[currentSong]["answer"].indexOf($("#guess").val().toLowerCase()) );
 			if( cp.audioClips[currentSong]["answer"].indexOf($("#guess").val().toLowerCase()) >= 0 ) {
 				rightAnswer();
 			} else {
