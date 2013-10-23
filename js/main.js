@@ -68,6 +68,22 @@ ClipPlayer = function( _clips, _answers, _onLoad ) {
     self.load();
 }
 
+function blinkMouth() {
+	clearTimeout( t );
+	blinkCount++;
+	if( blinkCount > 4 ) {
+		$(".right").removeClass("blink right").addClass("complete");
+		blinkCount = 0;
+	} else {
+		if( blinkCount % 2 == 0 ) {
+			$(".right").addClass("blink");
+		} else {
+			$(".right").removeClass("blink");
+		}
+		setTimeout( blinkMouth, 100 );
+	}
+}
+
 function blinkRight() {
 	clearTimeout( t );
 	blinkCount++;
@@ -130,6 +146,8 @@ function checkScore() {
 			$("#gameover").fadeIn();
 		});
 	}
+
+	$("#guess").val("");
 }
 
 /*
