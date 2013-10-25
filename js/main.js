@@ -12,11 +12,11 @@ var clips = [
 
 var answers = [
 	["adele"],
-	["backstreet boys", "back street boys"],
-	["black eyed peas", "blackeyed peas"],
-	["britney spears"],
-	["britney spears"],
-	["britney spears"],
+	["backstreetboys", "backstreet boys", "back street boys"],
+	["blackeyedpeas", "black eyed peas", "blackeyed peas"],
+	["britney", "britney spears"],
+	["britney", "britney spears"],
+	["britney", "britney spears"],
 	["correct"],
 	["wrong"],
 	["crying"]
@@ -117,6 +117,7 @@ function blinkGuess() {
 }
 
 function rightAnswer() {
+	$(".active .artist").addClass(answers[currentSong][0]).css("opacity",1);
 	$(".active").removeClass("active").addClass("right");
 	score++;
 	cp.play(6);
@@ -149,11 +150,6 @@ function checkScore() {
 
 	$("#guess").val("");
 }
-
-/*
-	don't blink anything but the right answers
-	only count first try
-*/
 
 var t, blinkCount = 0, cp, playing = 0;
 var currentSong = -1;
@@ -189,7 +185,7 @@ $(document).ready(function() {
 	});
 
 	$("#enter").click(function(){
-		if( !justTried ) {
+		if( !justTried && $("#guess").val() != "" ) {
 			justTried = true;
 			$("#answer").submit();
 		}
