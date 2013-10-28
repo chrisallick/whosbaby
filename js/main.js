@@ -192,7 +192,7 @@ $(document).ready(function() {
 	});
 
 	$("#noclue").click(function(){
-		if( !justTried) {
+		if( !justTried ) {
 			justTried = true;
 			wrongAnswer();
 			checkScore();	
