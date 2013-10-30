@@ -55,7 +55,7 @@ body { -webkit-box-shadow: inset #FD7173 0 0 0 10px; }
 #game .two { left: -webkit-calc((142px + 17px) * 1); }
 #game .three { left: -webkit-calc((142px + 17px) * 2); }
 
-#game .right .artist, #game .complete .artist { width: 121px; height: 121px; background: url("../img/artists.png") top left no-repeat; background-size: 200% 4000%; background-position: 0px 0px; position: absolute; bottom: 20px; left: 21px; opacity: 0; }
+#game .right .artist, #game .complete .artist { width: 121px; height: 121px; background: url("../img/artists.png") top left no-repeat; background-size: 200% 3800%; background-position: 0px 0px; position: absolute; bottom: 20px; left: 21px; opacity: 0; }
 #game .right:hover .artist, #game .complete:hover .artist { background-position: -121px 0px; left: 18px; }
 #game .right:active .artist, #game .complete:active .artist { bottom: 7px; left: 6px; }
 
@@ -64,118 +64,118 @@ body { -webkit-box-shadow: inset #FD7173 0 0 0 10px; }
 */
 
 #game .right .britney, #game .complete .britney { background-position: 0px calc(-121px * 0); }
-#game .right:hover .britney, #game .complete:hover .britney { background-position: -121px calc(-121px * 0); left: 18px; }
+#game .right:hover .britney, #game .complete:hover .britney { background-position: -121px calc(-121px * 0); }
 
 #game .right .busta, #game .complete .busta { background-position: 0px calc(-121px * 1); }
-#game .right:hover .busta, #game .complete:hover .busta { background-position: -121px calc(-121px * 1); left: 18px; }
+#game .right:hover .busta, #game .complete:hover .busta { background-position: -121px calc(-121px * 1); }
 
 #game .right .enrique, #game .complete .enrique { background-position: 0px calc(-121px * 2); }
-#game .right:hover .enrique, #game .complete:hover .enrique { background-position: -121px calc(-121px * 2); left: 18px; }
+#game .right:hover .enrique, #game .complete:hover .enrique { background-position: -121px calc(-121px * 2); }
 
 #game .right .fergie, #game .complete .fergie { background-position: 0px calc(-121px * 3); }
-#game .right:hover .efergie, #game .complete:hover .fergie { background-position: -121px calc(-121px * 3); left: 18px; }
+#game .right:hover .efergie, #game .complete:hover .fergie { background-position: -121px calc(-121px * 3); }
 
 #game .right .jayz, #game .complete .jayz { background-position: 0px calc(-121px * 4); }
-#game .right:hover .jay, #game .complete:hover .jay { background-position: -121px calc(-121px * 4); left: 18px; }
+#game .right:hover .jay, #game .complete:hover .jayz { background-position: -121px calc(-121px * 4); }
 
 #game .right .timberlake, #game .complete .timberlake { background-position: 0px calc(-121px * 5); }
-#game .right:hover .timberlake, #game .complete:hover .timberlake { background-position: -121px calc(-121px * 5); left: 18px; }
+#game .right:hover .timberlake, #game .complete:hover .timberlake { background-position: -121px calc(-121px * 5); }
 
 #game .right .katy, #game .complete .katy { background-position: 0px calc(-121px * 6); }
-#game .right:hover .katy, #game .complete:hover .katy { background-position: -121px calc(-121px * 6); left: 18px; }
+#game .right:hover .katy, #game .complete:hover .katy { background-position: -121px calc(-121px * 6); }
 
 #game .right .ladygaga, #game .complete .ladygaga { background-position: 0px calc(-121px * 7); }
-#game .right:hover .ladygaga, #game .complete:hover .ladygag { background-position: -121px calc(-121px * 7); left: 18px; }
+#game .right:hover .ladygaga, #game .complete:hover .ladygag { background-position: -121px calc(-121px * 7); }
 
 #game .right .mariah, #game .complete .mariah { background-position: 0px calc(-121px * 8); }
-#game .right:hover .mariah, #game .complete:hover .mariah { background-position: -121px calc(-121px * 8); left: 18px; }
+#game .right:hover .mariah, #game .complete:hover .mariah { background-position: -121px calc(-121px * 8); }
 
 #game .right .nodoubt, #game .complete .nodoubt { background-position: 0px calc(-121px * 9); }
-#game .right:hover .nodoubt, #game .complete:hover .nodoubt { background-position: -121px calc(-121px * 9); left: 18px; }
+#game .right:hover .nodoubt, #game .complete:hover .nodoubt { background-position: -121px calc(-121px * 9); }
 
 #game .right .backstreetboys, #game .complete .backstreetboys { background-position: 0px calc(-121px * 10); }
-#game .right:hover .backstreetboys, #game .complete:hover .backstreetboys { background-position: -121px calc(-121px * 10); left: 18px; }
+#game .right:hover .backstreetboys, #game .complete:hover .backstreetboys { background-position: -121px calc(-121px * 10); }
 
 #game .right .christina, #game .complete .christina { background-position: 0px calc(-121px * 11); }
-#game .right:hover .christina, #game .complete:hover .christina { background-position: -121px calc(-121px * 11); left: 18px; }
+#game .right:hover .christina, #game .complete:hover .christina { background-position: -121px calc(-121px * 11); }
 
 #game .right .george, #game .complete .george { background-position: 0px calc(-121px * 12); }
-#game .right:hover .george, #game .complete:hover .george { background-position: -121px calc(-121px * 12); left: 18px; }
+#game .right:hover .george, #game .complete:hover .george { background-position: -121px calc(-121px * 12); }
 
 #game .right .haddaway, #game .complete .haddaway { background-position: 0px calc(-121px * 13); }
-#game .right:hover .haddaway, #game .complete:hover .haddaway { left: 18px; background-position: -121px calc(-121px * 13); }
+#game .right:hover .haddaway, #game .complete:hover .haddaway { background-position: -121px calc(-121px * 13); }
 
 #game .right .janet, #game .complete .janet { background-position: 0px calc(-121px * 14); }
-#game .right:hover .janet, #game .complete:hover .janet { left: 18px; background-position: -121px calc(-121px * 14); }
+#game .right:hover .janet, #game .complete:hover .janet {  background-position: -121px calc(-121px * 14); }
 
 #game .right .kingsofleon, #game .complete .kingsofleon { background-position: 0px calc(-121px * 15); }
-#game .right:hover .kingsofleon, #game .complete:hover .kingsofleon { left: 18px; background-position: -121px calc(-121px * 15); }
+#game .right:hover .kingsofleon, #game .complete:hover .kingsofleon {  background-position: -121px calc(-121px * 15); }
 
 #game .right .jackson, #game .complete .jackson { background-position: 0px calc(-121px * 16); }
-#game .right:hover .jackson, #game .complete:hover .jackson { left: 18px; background-position: -121px calc(-121px * 16); }
+#game .right:hover .jackson, #game .complete:hover .jackson {  background-position: -121px calc(-121px * 16); }
 
 #game .right .robyn, #game .complete .robyn { background-position: 0px calc(-121px * 17); }
-#game .right:hover .robyn, #game .complete:hover .robyn { left: 18px; background-position: -121px calc(-121px * 17); }
+#game .right:hover .robyn, #game .complete:hover .robyn { background-position: -121px calc(-121px * 17); }
 
-#game .right .sisco, #game .complete .sisco { background-position: 0px calc(-121px * 18); }
-#game .right:hover .sisco, #game .complete:hover .sisco { left: 18px; background-position: -121px calc(-121px * 18); }
+#game .right .sisqo, #game .complete .sisqo { background-position: 0px calc(-121px * 18); }
+#game .right:hover .sisqo, #game .complete:hover .sisqo {  background-position: -121px calc(-121px * 18); }
 
 #game .right .blackeyedpeas, #game .complete .blackeyedpeas { background-position: 0px calc(-121px * 19); }
-#game .right:hover .blackeyedpeas, #game .complete:hover .blackeyedpeas { left: 18px; background-position: -121px calc(-121px * 19); }
+#game .right:hover .blackeyedpeas, #game .complete:hover .blackeyedpeas { background-position: -121px calc(-121px * 19); }
 
 #game .right .killers, #game .complete .killers { background-position: 0px calc(-121px * 20); }
-#game .right:hover .killers, #game .complete:hover .killers { left: 18px; background-position: -121px calc(-121px * 20); }
+#game .right:hover .killers, #game .complete:hover .killers {  background-position: -121px calc(-121px * 20); }
 
 #game .right .chapman, #game .complete .chapman { background-position: 0px calc(-121px * 21); }
-#game .right:hover .chapman, #game .complete:hover .chapman { left: 18px; background-position: -121px calc(-121px * 21); }
+#game .right:hover .chapman, #game .complete:hover .chapman { background-position: -121px calc(-121px * 21); }
 
 #game .right .vanillaice, #game .complete .vanillaice { background-position: 0px calc(-121px * 22); }
-#game .right:hover .vanillaice, #game .complete:hover .vanillaice { left: 18px; background-position: -121px calc(-121px * 22); }
+#game .right:hover .vanillaice, #game .complete:hover .vanillaice { background-position: -121px calc(-121px * 22); }
 
 #game .right .eminem, #game .complete .eminem { background-position: 0px calc(-121px * 23); }
-#game .right:hover .eminem, #game .complete:hover .eminem { left: 18px; background-position: -121px calc(-121px * 23); }
+#game .right:hover .eminem, #game .complete:hover .eminem {  background-position: -121px calc(-121px * 23); }
 
 #game .right .bieber, #game .complete .bieber { background-position: 0px calc(-121px * 24); }
-#game .right:hover .bieber, #game .complete:hover .bieber { left: 18px; background-position: -121px calc(-121px * 24); }
+#game .right:hover .bieber, #game .complete:hover .bieber { background-position: -121px calc(-121px * 24); }
 
 #game .right .elvis, #game .complete .elvis { background-position: 0px calc(-121px * 25); }
-#game .right:hover .elvis, #game .complete:hover .elvis { left: 18px; background-position: -121px calc(-121px * 25); }
+#game .right:hover .elvis, #game .complete:hover .elvis {  background-position: -121px calc(-121px * 25); }
 
 #game .right .aliciakeys, #game .complete .aliciakeys { background-position: 0px calc(-121px * 26); }
-#game .right:hover .aliciakeys, #game .complete:hover .aliciakeys { left: 18px; background-position: -121px calc(-121px * 26); }
+#game .right:hover .aliciakeys, #game .complete:hover .aliciakeys {  background-position: -121px calc(-121px * 26); }
 
 #game .right .lana, #game .complete .lana { background-position: 0px calc(-121px * 27); }
-#game .right:hover .lana, #game .complete:hover .lana { left: 18px; background-position: -121px calc(-121px * 27); }
+#game .right:hover .lana, #game .complete:hover .lana {  background-position: -121px calc(-121px * 27); }
 
 #game .right .50cent, #game .complete .50cent { background-position: 0px calc(-121px * 28); }
-#game .right:hover .50cent, #game .complete:hover .50cent { left: 18px; background-position: -121px calc(-121px * 28); }
+#game .right:hover .50cent, #game .complete:hover .50cent {  background-position: -121px calc(-121px * 28); }
 
 #game .right .adele, #game .complete .adele { background-position: 0px calc(-121px * 29); }
-#game .right:hover .adele, #game .complete:hover .adele { left: 18px; background-position: -121px calc(-121px * 29); }
+#game .right:hover .adele, #game .complete:hover .adele {  background-position: -121px calc(-121px * 29); }
 
 #game .right .beyonce, #game .complete .beyonce { background-position: 0px calc(-121px * 30); }
-#game .right:hover .beyonce, #game .complete:hover .beyonce { left: 18px; background-position: -121px calc(-121px * 30); }
+#game .right:hover .beyonce, #game .complete:hover .beyonce { background-position: -121px calc(-121px * 30); }
 
 #game .right .chrisbrown, #game .complete .chrisbrown { background-position: 0px calc(-121px * 31); }
-#game .right:hover .chrisbrown, #game .complete:hover .chrisbrown { left: 18px; background-position: -121px calc(-121px * 31); }
+#game .right:hover .chrisbrown, #game .complete:hover .chrisbrown { background-position: -121px calc(-121px * 31); }
 
 #game .right .laroux, #game .complete .laroux { background-position: 0px calc(-121px * 32); }
-#game .right:hover .laroux, #game .complete:hover .laroux { left: 18px; background-position: -121px calc(-121px * 32); }
+#game .right:hover .laroux, #game .complete:hover .laroux { background-position: -121px calc(-121px * 32); }
 
 #game .right .moby, #game .complete .moby { background-position: 0px calc(-121px * 33); }
-#game .right:hover .moby, #game .complete:hover .moby { left: 18px; background-position: -121px calc(-121px * 33); }
+#game .right:hover .moby, #game .complete:hover .moby { background-position: -121px calc(-121px * 33); }
 
 #game .right .rihanna, #game .complete .rihanna { background-position: 0px calc(-121px * 34); }
-#game .right:hover .rihanna, #game .complete:hover .rihanna { left: 18px; background-position: -121px calc(-121px * 34); }
+#game .right:hover .rihanna, #game .complete:hover .rihanna { background-position: -121px calc(-121px * 34); }
 
 #game .right .shakira, #game .complete .shakira { background-position: 0px calc(-121px * 35); }
-#game .right:hover .shakira, #game .complete:hover .shakira { left: 18px; background-position: -121px calc(-121px * 35); }
+#game .right:hover .shakira, #game .complete:hover .shakira { background-position: -121px calc(-121px * 35); }
 
 #game .right .tupac, #game .complete .tupac { background-position: 0px calc(-121px * 36); }
-#game .right:hover .tupac, #game .complete:hover .tupac { left: 18px; background-position: -121px calc(-121px * 36); }
+#game .right:hover .tupac, #game .complete:hover .tupac { background-position: -121px calc(-121px * 36); }
 
 #game .right .usher, #game .complete .usher { background-position: 0px calc(-121px * 37); }
-#game .right:hover .usher, #game .complete:hover .usher { left: 18px; background-position: -121px calc(-121px * 37); }
+#game .right:hover .usher, #game .complete:hover .usher { background-position: -121px calc(-121px * 37); }
 
 
 /*
@@ -202,8 +202,18 @@ body { -webkit-box-shadow: inset #FD7173 0 0 0 10px; }
 	RESULTS AND SHARE
 */
 
-#gameover { width: 488px; margin: 0 auto; display: none;  }
-#gameover .message p { width: 488px; text-align: center; margin-bottom: 30px; }
-#gameover .message .lost { display: none; }
-#gameover .playshare { width: 385px; margin: 0 auto; }
-#gameover .playshare .first { margin-right: 33px; }
+#gameover { width: 488px; margin: 0 auto; display: none; }
+#gameover .message p { width: 488px; text-align: center; margin-bottom: 20px; font: 800 24px "futura-pt"; color: #56c2d2; }
+#gameover .message p span { color: #ff6969; }
+#gameover .message .lost { display: none; width: 480px; }
+#gameover .playshare { width: 377px; margin: 0 auto;  }
+#gameover .playshare a { text-align: center; float: left; box-sizing: border-box; padding: 9px; width: 178px; height: 46px; background-color: #FD6A6C; cursor: url("../img/pointer.png"), pointer; font: 800 20px "futura-pt"; color: #ffffbf; }
+#gameover .playshare .share { float: left; width: 178px; height: 46px; }
+#gameover .playshare .share a { width: 178px; }
+#gameover .playshare .share .links { display: none; width: 178px; height: 46px; }
+#gameover .playshare .share .links img { float: left; display: block; margin-right: 8px; }
+#gameover .playshare .share .links img:hover { opacity: .6; cursor: url("../img/pointer.png"), pointer; }
+#gameover .playshare .share .links .no-margin { margin-right: 0px; }
+#gameover .playshare .share:hover a { display: none; }
+#gameover .playshare .share:hover .links { display: block; }
+#gameover .playshare .playagain { margin-right: 20px; }

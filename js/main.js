@@ -1,25 +1,107 @@
 var clips = [
+	"correct",
+	"wrong",
+	"crying"
+];
+
+var all_clips = [
 	"adele-dont-you-remember-cut",
 	"backstreet-boys-shape-of-my-heart-cut",
 	"black-eyed-peas-dont-phunk-with-my-heart-cut",
 	"britney-spears_baby-one-more-time_cut",
 	"britney-spears-im-a-slave-4-u-cut",
 	"britney-spears-till-the-world-ends-cut",
-	"correct",
-	"wrong",
-	"crying"
+	"britney-spears-womanizer-cut",
+	"britney-spears-you-drive-me-crazy-cut",
+	"busta-rhymes-&-mariah-carey-baby-if-you-give-it-to-me-cut",
+	"chris-brown-forever-cut",
+	"christina-aguilera-come-on-over-cut",
+	"christina-aguilera-genie-in-a-bottle-cut",
+	"elvis-presley-suspicious-mind-cut",
+	"eminem-mockingbird-cut",
+	"enrique-iglesias-hero-cut",
+	"fergie-big-girls-dont-cry-cut",
+	"george-michael-faith-cut",
+	"haddaway-baby-dont-hurt-me-cut",
+	"janet-jackson-my-baby-cut",
+	"jay-z-hard-knock-life-cut",
+	"justin-bieber-baby-cut",
+	"justin-timberlake-what-goes-around-comes-around-cut",
+	"katy-perry-teenage-dream-cut",
+	"kings-of-leon-knocked-up-cut",
+	"kings-of-leon-on-call-cut",
+	"lady-gaga-bad-romance-cut",
+	"lady-gaga-poker-face-cut",
+	"lana-del-rey-video-games-cut",
+	"laroux-bulletproof-cut",
+	"mariah-carey-always-be-my-baby-cut",
+	"mariah-carey-crybaby-cut",
+	"michael-jackson-the-way-you-make-me-feel-cut",
+	"moby-find-my-baby-cut",
+	"no-doubt-hey-baby-cut",
+	"rihanna-only-girl-cut",
+	"rihanna-rude-boy-cut",
+	"rihanna-whats-my-name-cut",
+	"robyn-o-baby-cut",
+	"sisqo-thong-song-cut",
+	"the-killers-somebody-told-me-cut",
+	"tracy-chapman-baby-can-i-hold-you-cut",
+	"usher-burn-cut",
+	"usher-there-goes-my-baby-cut",
+	"vanilla-ice-ice-ice-baby-cut"
 ];
 
 var answers = [
-	["adele"],
-	["backstreetboys", "backstreet boys", "back street boys"],
-	["blackeyedpeas", "black eyed peas", "blackeyed peas"],
-	["britney", "britney spears"],
-	["britney", "britney spears"],
-	["britney", "britney spears"],
 	["correct"],
 	["wrong"],
 	["crying"]
+];
+
+var all_answers = [
+	["adele"],
+	["backstreetboys", "backstreet boys", "back street boys"],
+	["blackeyedpeas", "black eyed peas", "blackeyed peas"],
+  	["britney", "britney spears"],
+  	["britney", "britney spears"],
+  	["britney", "britney spears"],
+  	["britney", "britney spears"],
+  	["britney", "britney spears"],
+	["busta rhymes", "buster rhymes", "busta"],
+	["chrisbrown", "chris brown", "chris"],
+	["christina", "christina aguilera", "christina"],
+	["christina", "christina aguilera", "christina"],
+	["elvis", "elvis presley"],
+	["eminem"],
+	["enrique", "enrique iglesias", "enrique", "iglesias"],
+	["fergie"],
+	["george", "george michael"],
+	["haddaway"],
+	["janet", "janet jackson"],
+	["jayz", "jay-z", "jay z", "jay"],
+	["bieber", "justin bieber"],
+	["timberlake", "justin timberlake", "justin"],
+	["katy", "katy perry"],
+	["kingsofleon", "kings of leon", "kings of leon"],
+	["kingsofleon", "kings of leon", "kings of leon"],
+	["ladygaga", "lady gaga", "gaga"],
+	["ladygaga", "lady gaga", "gaga"],
+	["lana", "lana del rey", "lana delray"],
+	["laroux"],
+	["mariah", "mariah carey"],
+	["mariah", "mariah carey"],
+	["jackson", "michael jackson"],
+	["moby"],
+	["nodoubt", "no doubt"],
+	["rihanna"],
+	["rihanna"],
+	["rihanna"],
+	["robyn", "robin"],
+	["sisqo"],
+	["killers", "the killers"],
+	["chapman", "tracy chapman"],
+	["usher"],
+	["usher"],
+	["vanillaice", "vanilla ice", "vanilla"]
 ];
 
 ClipPlayer = function( _clips, _answers, _onLoad ) {
@@ -156,7 +238,18 @@ var currentSong = -1;
 var score = 0;
 var tries = 0;
 var justTried = true;
+var picked = [];
 $(document).ready(function() {
+
+	for( var i = 0; i < 6; i++ ) {
+		var index = Math.floor(Math.random()*all_answers.length);
+		while( picked.indexOf(index) != -1 ) {
+			index = Math.floor(Math.random()*all_answers.length);
+		}
+		answers.unshift( all_answers[index] );
+		clips.unshift( all_clips[index] );
+		picked.push( index );
+	}
 
 	cp = new ClipPlayer( clips, answers, function(){
 		console.log("all loaded");
@@ -214,4 +307,9 @@ $(document).ready(function() {
 
 		return false;
 	});
+
+	$(".playshare .playagain").click(function(event){
+		event.preventDefault();
+		location.reload();
+	})
 });
