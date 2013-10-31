@@ -139,11 +139,8 @@ ClipPlayer = function( _clips, _answers, _onLoad ) {
     		self.audioClips[i]["clip"].addEventListener('ended', function() {
 				playing--;
 				if( !playing ) {
-					if( self.lastPlayed < 6 ) {
+					if( self.lastPlayed < 6 && blinkAfter ) {
 						blinkGuess();
-					} else if( self.lastPlayed == 8 ) {
-						$("#"+currentButton).removeClass("crying");
-						$(".artist", "#"+currentButton).addClass(answers[currentSong][0]).css("opacity",1);
 					}
 				}
     		}, false);
@@ -202,6 +199,8 @@ function blinkGuess() {
 }
 
 function rightAnswer() {
+	cp.audioClips[currentButton]["tried"] = true;
+
 	$(".active .artist").addClass(answers[currentSong][0]).css("opacity",1);
 	$(".active").removeClass("active").addClass("right");
 	score++;
@@ -210,10 +209,19 @@ function rightAnswer() {
 }
 
 function wrongAnswer() {
+	cp.audioClips[currentButton]["tried"] = true;
+
 	cp.play(7);
 	setTimeout(function(){
 		cp.play(8);
 	}, 700);
+	var go = currentButton;
+	setTimeout(function(){
+		$("#"+go).removeClass("crying");
+		$(".artist", "#"+go).css("opacity",1);
+	}, 1600);
+						
+	$(".active .artist").addClass(answers[currentSong][0]);
 	$(".active").removeClass("active").addClass("wrong crying");
 }
 
@@ -229,6 +237,7 @@ function checkScore() {
 				$("#gameover .lost").show();
 			}
 
+			$("#fb-description").attr("content", "I got "+ score +" out of 6 babies correct. How well do you know your babies, baby?! whosebabyisitanyway.com");
 			$("#gameover").fadeIn();
 		});
 	}
@@ -243,6 +252,7 @@ var tries = 0;
 var justTried = true;
 var picked = [];
 var currentButton = -1;
+blinkAfter = false;
 $(document).ready(function() {
 
 	for( var i = 0; i < 6; i++ ) {
@@ -260,17 +270,21 @@ $(document).ready(function() {
 	});
 
 	$("#game .button").click(function() {
-		if( !$(this).hasClass("right") && !$(this).hasClass("wrong") && !$(this).hasClass("complete") ) {
+		if( !$(this).hasClass("right") ) {
 			var index = $(this).attr("id");
 			currentButton = index;
 			if( cp.audioClips[index]["tried"] == false ) {
 				$("#guess").removeClass("active");
 				justTried = false;
 				currentSong = index;
+				blinkAfter = true;
 				cp.play( index );
 
 				$(".active").removeClass("active");
 				$(this).addClass("active");
+			} else if( cp.audioClips[index]["tried"] == true ) {
+				blinkAfter = false;
+				cp.play( index );
 			}
 		}
 	});	
@@ -300,7 +314,6 @@ $(document).ready(function() {
 
 	$("#answer").submit(function(event) {
 		if( currentSong != -1 && cp.audioClips[currentSong]["tried"] == false ) {
-			//console.log( cp.audioClips[currentSong]["answer"].indexOf($("#guess").val().toLowerCase()) );
 			if( cp.audioClips[currentSong]["answer"].indexOf($("#guess").val().toLowerCase()) >= 0 ) {
 				rightAnswer();
 			} else {
