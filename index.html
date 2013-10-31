@@ -39,9 +39,16 @@
     <body>
         <div id="wrapper">
             <div id="social" class="clear">
-                <a class="t" href="#"><img src="./img/twitter.png">
-                <a class="fb" href="#"><img src="./img/facebook.png">
+                <a class="t" href="javascript:(function(){window.twttr=window.twttr||{};var D=550,A=450,C=screen.height,B=screen.width,H=Math.round((B/2)-(D/2)),G=0,F=document,E;if(C>A){G=Math.round((C/2)-(A/2))}window.twttr.shareWin=window.open('https://twitter.com/intent/tweet?text=How well do you know your babies?! whosebabyisitanyway.com','','left='+H+',top='+G+',width='+D+',height='+A+',personalbar=0,toolbar=0,scrollbars=1,resizable=1');E=F.createElement('script');E.src='http://platform.twitter.com/widgets.js';F.getElementsByTagName('head')[0].appendChild(E)}());"><img src="./img/twitter.png" /></a>
+                <a class="fb" href="#" onclick="
+                window.open(
+                  'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('http://whosebabyisitanyway.com'), 
+                  'facebook-share-dialog', 
+                  'width=626,height=436'); 
+                return false;"><img src="./img/facebook.png"></a>
             </div>
+
+
             <div id="logo">
                 <a href="./"><img src="./img/logo.gif" /></a>
             </div>
@@ -93,10 +100,16 @@
                 <div class="playshare clear">
                     <a class="playagain" href="#">PLAY AGAIN</a>
                     <div class="share">
-                        <a href="#">SHARE SCORE</a>
+                        <div class="share-overlay">SHARE SCORE</div>
                         <div class="links clear">
-                            <img src="./img/twitter2.png" />
-                            <img class="no-margin" src="./img/facebook2.png" />
+                            <a class="t" href="javascript:(function(){window.twttr=window.twttr||{};var D=550,A=450,C=screen.height,B=screen.width,H=Math.round((B/2)-(D/2)),G=0,F=document,E;if(C>A){G=Math.round((C/2)-(A/2))}window.twttr.shareWin=window.open('https://twitter.com/intent/tweet?text=How well do you know your babies?! '+ score +'  whosebabyisitanyway.com','','left='+H+',top='+G+',width='+D+',height='+A+',personalbar=0,toolbar=0,scrollbars=1,resizable=1');E=F.createElement('script');E.src='http://platform.twitter.com/widgets.js';F.getElementsByTagName('head')[0].appendChild(E)}());"><img src="./img/twitter2.png" /></a>
+                            <a class="no-margin fb" href="#" onclick="
+                            window.open(
+                              'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('http://whosebabyisitanyway.com'), 
+                              'facebook-share-dialog', 
+                              'width=626,height=436'); 
+                            return false;"><img src="./img/facebook2.png"></a>
+
                         </div>
                     </div>
                     
