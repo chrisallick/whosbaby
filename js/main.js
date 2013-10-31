@@ -141,6 +141,9 @@ ClipPlayer = function( _clips, _answers, _onLoad ) {
 				if( !playing ) {
 					if( self.lastPlayed < 6 ) {
 						blinkGuess();
+					} else if( self.lastPlayed == 8 ) {
+						$("#"+currentButton).removeClass("crying");
+						$(".artist", "#"+currentButton).addClass(answers[currentSong][0]).css("opacity",1);
 					}
 				}
     		}, false);
@@ -239,6 +242,7 @@ var score = 0;
 var tries = 0;
 var justTried = true;
 var picked = [];
+var currentButton = -1;
 $(document).ready(function() {
 
 	for( var i = 0; i < 6; i++ ) {
@@ -258,6 +262,7 @@ $(document).ready(function() {
 	$("#game .button").click(function() {
 		if( !$(this).hasClass("right") && !$(this).hasClass("wrong") && !$(this).hasClass("complete") ) {
 			var index = $(this).attr("id");
+			currentButton = index;
 			if( cp.audioClips[index]["tried"] == false ) {
 				$("#guess").removeClass("active");
 				justTried = false;

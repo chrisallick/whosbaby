@@ -38,10 +38,10 @@ body { -webkit-box-shadow: inset #FD7173 0 0 0 10px; }
 #game .active.close { background-position: calc(-142px * 0) calc(-142px * 2); }
 #game .active:active { background-position: calc(-142px * 2) calc(-142px * 0); }
 
+#game .wrong { background-position: calc(-142px * 2) calc(-142px * 2); }
 #game .wrong.crying { background-position: calc(-142px * 1) calc(-142px * 2); }
-#game .wrong.artist { background-position: calc(-142px * 2) calc(-142px * 2); }
-#game .wrong.artist:hover { background-position: calc(-142px * 0) calc(-142px * 2); }
-#game .wrong.artist:active { background-position: calc(-142px * 1) calc(-142px * 1); }
+#game .wrong:hover { background-position: calc(-142px * 0) calc(-142px * 3); }
+#game .wrong:active { background-position: calc(-142px * 1) calc(-142px * 3); }
 
 #game .right { background-position: calc(-142px * 0) calc(-142px * 4); }
 #game .complete { background-position: calc(-142px * 0) calc(-142px * 4); }
@@ -55,127 +55,127 @@ body { -webkit-box-shadow: inset #FD7173 0 0 0 10px; }
 #game .two { left: -webkit-calc((142px + 17px) * 1); }
 #game .three { left: -webkit-calc((142px + 17px) * 2); }
 
-#game .right .artist, #game .complete .artist { width: 121px; height: 121px; background: url("../img/artists.png") top left no-repeat; background-size: 200% 3800%; background-position: 0px 0px; position: absolute; bottom: 20px; left: 21px; opacity: 0; }
-#game .right:hover .artist, #game .complete:hover .artist { background-position: -121px 0px; left: 18px; }
-#game .right:active .artist, #game .complete:active .artist { bottom: 7px; left: 6px; }
+#game .right .artist, #game .complete .artist, #game .wrong .artist { width: 121px; height: 121px; background: url("../img/artists.png") top left no-repeat; background-size: 200% 3800%; background-position: 0px 0px; position: absolute; bottom: 20px; left: 21px; opacity: 0; }
+#game .right:hover .artist, #game .complete:hover .artist, #game .wrong:hover .artist { background-position: -121px 0px; left: 18px; }
+#game .right:active .artist, #game .complete:active .artist, #game .wrong:active .artist { bottom: 7px; left: 6px; }
 
 /*
 	ARTISTS
 */
 
-#game .right .britney, #game .complete .britney { background-position: 0px calc(-121px * 0); }
-#game .right:hover .britney, #game .complete:hover .britney { background-position: -121px calc(-121px * 0); }
+#game .right .britney, #game .complete .britney, #game .wrong .britney { background-position: 0px calc(-121px * 0); }
+#game .right:hover .britney, #game .complete:hover .britney, #game .wrong:hover .britney { background-position: -121px calc(-121px * 0); }
 
-#game .right .busta, #game .complete .busta { background-position: 0px calc(-121px * 1); }
-#game .right:hover .busta, #game .complete:hover .busta { background-position: -121px calc(-121px * 1); }
+#game .right .busta, #game .complete .busta, #game .wrong .busta { background-position: 0px calc(-121px * 1); }
+#game .right:hover .busta, #game .complete:hover .busta, #game .wrong:hover .busta { background-position: -121px calc(-121px * 1); }
 
-#game .right .enrique, #game .complete .enrique { background-position: 0px calc(-121px * 2); }
-#game .right:hover .enrique, #game .complete:hover .enrique { background-position: -121px calc(-121px * 2); }
+#game .right .enrique, #game .complete .enrique, #game .wrong .enrique { background-position: 0px calc(-121px * 2); }
+#game .right:hover .enrique, #game .complete:hover .enrique, #game .wrong:hover .enrique { background-position: -121px calc(-121px * 2); }
 
-#game .right .fergie, #game .complete .fergie { background-position: 0px calc(-121px * 3); }
-#game .right:hover .efergie, #game .complete:hover .fergie { background-position: -121px calc(-121px * 3); }
+#game .right .fergie, #game .complete .fergie, #game .wrong .fergie { background-position: 0px calc(-121px * 3); }
+#game .right:hover .efergie, #game .complete:hover .fergie, #game .wrong:hover .fergie { background-position: -121px calc(-121px * 3); }
 
-#game .right .jayz, #game .complete .jayz { background-position: 0px calc(-121px * 4); }
-#game .right:hover .jay, #game .complete:hover .jayz { background-position: -121px calc(-121px * 4); }
+#game .right .jayz, #game .complete .jayz, #game .wrong .jayz { background-position: 0px calc(-121px * 4); }
+#game .right:hover .jay, #game .complete:hover .jayz, #game .wrong:hover .jayz { background-position: -121px calc(-121px * 4); }
 
-#game .right .timberlake, #game .complete .timberlake { background-position: 0px calc(-121px * 5); }
-#game .right:hover .timberlake, #game .complete:hover .timberlake { background-position: -121px calc(-121px * 5); }
+#game .right .timberlake, #game .complete .timberlake, #game .wrong .timberlake { background-position: 0px calc(-121px * 5); }
+#game .right:hover .timberlake, #game .complete:hover .timberlake, #game .wrong:hover .timberlake { background-position: -121px calc(-121px * 5); }
 
-#game .right .katy, #game .complete .katy { background-position: 0px calc(-121px * 6); }
-#game .right:hover .katy, #game .complete:hover .katy { background-position: -121px calc(-121px * 6); }
+#game .right .katy, #game .complete .katy, #game .wrong .katy { background-position: 0px calc(-121px * 6); }
+#game .right:hover .katy, #game .complete:hover .katy, #game .wrong:hover .katy { background-position: -121px calc(-121px * 6); }
 
-#game .right .ladygaga, #game .complete .ladygaga { background-position: 0px calc(-121px * 7); }
-#game .right:hover .ladygaga, #game .complete:hover .ladygag { background-position: -121px calc(-121px * 7); }
+#game .right .ladygaga, #game .complete .ladygaga, #game .wrong .ladygaga { background-position: 0px calc(-121px * 7); }
+#game .right:hover .ladygaga, #game .complete:hover .ladygag, #game .wrong:hover .ladygag { background-position: -121px calc(-121px * 7); }
 
-#game .right .mariah, #game .complete .mariah { background-position: 0px calc(-121px * 8); }
-#game .right:hover .mariah, #game .complete:hover .mariah { background-position: -121px calc(-121px * 8); }
+#game .right .mariah, #game .complete .mariah, #game .wrong .mariah { background-position: 0px calc(-121px * 8); }
+#game .right:hover .mariah, #game .complete:hover .mariah, #game .wrong:hover .mariah { background-position: -121px calc(-121px * 8); }
 
-#game .right .nodoubt, #game .complete .nodoubt { background-position: 0px calc(-121px * 9); }
-#game .right:hover .nodoubt, #game .complete:hover .nodoubt { background-position: -121px calc(-121px * 9); }
+#game .right .nodoubt, #game .complete .nodoubt, #game .wrong .nodoubt { background-position: 0px calc(-121px * 9); }
+#game .right:hover .nodoubt, #game .complete:hover .nodoubt, #game .wrong:hover .nodoubt { background-position: -121px calc(-121px * 9); }
 
-#game .right .backstreetboys, #game .complete .backstreetboys { background-position: 0px calc(-121px * 10); }
-#game .right:hover .backstreetboys, #game .complete:hover .backstreetboys { background-position: -121px calc(-121px * 10); }
+#game .right .backstreetboys, #game .complete .backstreetboys, #game .wrong .backstreetboys { background-position: 0px calc(-121px * 10); }
+#game .right:hover .backstreetboys, #game .complete:hover .backstreetboys, #game .wrong:hover .backstreetboys { background-position: -121px calc(-121px * 10); }
 
-#game .right .christina, #game .complete .christina { background-position: 0px calc(-121px * 11); }
-#game .right:hover .christina, #game .complete:hover .christina { background-position: -121px calc(-121px * 11); }
+#game .right .christina, #game .complete .christina, #game .wrong .christina { background-position: 0px calc(-121px * 11); }
+#game .right:hover .christina, #game .complete:hover .christina, #game .wrong:hover .christina { background-position: -121px calc(-121px * 11); }
 
-#game .right .george, #game .complete .george { background-position: 0px calc(-121px * 12); }
-#game .right:hover .george, #game .complete:hover .george { background-position: -121px calc(-121px * 12); }
+#game .right .george, #game .complete .george, #game .wrong .george { background-position: 0px calc(-121px * 12); }
+#game .right:hover .george, #game .complete:hover .george, #game .wrong:hover .george { background-position: -121px calc(-121px * 12); }
 
-#game .right .haddaway, #game .complete .haddaway { background-position: 0px calc(-121px * 13); }
-#game .right:hover .haddaway, #game .complete:hover .haddaway { background-position: -121px calc(-121px * 13); }
+#game .right .haddaway, #game .complete .haddaway, #game .wrong .haddaway { background-position: 0px calc(-121px * 13); }
+#game .right:hover .haddaway, #game .complete:hover .haddaway, #game .wrong:hover .haddaway { background-position: -121px calc(-121px * 13); }
 
-#game .right .janet, #game .complete .janet { background-position: 0px calc(-121px * 14); }
-#game .right:hover .janet, #game .complete:hover .janet {  background-position: -121px calc(-121px * 14); }
+#game .right .janet, #game .complete .janet, #game .wrong .janet { background-position: 0px calc(-121px * 14); }
+#game .right:hover .janet, #game .complete:hover .janet, #game .wrong:hover .janet {  background-position: -121px calc(-121px * 14); }
 
-#game .right .kingsofleon, #game .complete .kingsofleon { background-position: 0px calc(-121px * 15); }
-#game .right:hover .kingsofleon, #game .complete:hover .kingsofleon {  background-position: -121px calc(-121px * 15); }
+#game .right .kingsofleon, #game .complete .kingsofleon, #game .wrong .kingsofleon { background-position: 0px calc(-121px * 15); }
+#game .right:hover .kingsofleon, #game .complete:hover .kingsofleon, #game .wrong:hover .kingsofleon {  background-position: -121px calc(-121px * 15); }
 
-#game .right .jackson, #game .complete .jackson { background-position: 0px calc(-121px * 16); }
-#game .right:hover .jackson, #game .complete:hover .jackson {  background-position: -121px calc(-121px * 16); }
+#game .right .jackson, #game .complete .jackson, #game .wrong .jackson { background-position: 0px calc(-121px * 16); }
+#game .right:hover .jackson, #game .complete:hover .jackson, #game .wrong:hover .jackson {  background-position: -121px calc(-121px * 16); }
 
-#game .right .robyn, #game .complete .robyn { background-position: 0px calc(-121px * 17); }
-#game .right:hover .robyn, #game .complete:hover .robyn { background-position: -121px calc(-121px * 17); }
+#game .right .robyn, #game .complete .robyn, #game .wrong .robyn { background-position: 0px calc(-121px * 17); }
+#game .right:hover .robyn, #game .complete:hover .robyn, #game .wrong:hover .robyn { background-position: -121px calc(-121px * 17); }
 
-#game .right .sisqo, #game .complete .sisqo { background-position: 0px calc(-121px * 18); }
-#game .right:hover .sisqo, #game .complete:hover .sisqo {  background-position: -121px calc(-121px * 18); }
+#game .right .sisqo, #game .complete .sisqo, #game .wrong .sisqo { background-position: 0px calc(-121px * 18); }
+#game .right:hover .sisqo, #game .complete:hover .sisqo, #game .wrong:hover .sisqo {  background-position: -121px calc(-121px * 18); }
 
-#game .right .blackeyedpeas, #game .complete .blackeyedpeas { background-position: 0px calc(-121px * 19); }
-#game .right:hover .blackeyedpeas, #game .complete:hover .blackeyedpeas { background-position: -121px calc(-121px * 19); }
+#game .right .blackeyedpeas, #game .complete .blackeyedpeas, #game .wrong .blackeyedpeas { background-position: 0px calc(-121px * 19); }
+#game .right:hover .blackeyedpeas, #game .complete:hover .blackeyedpeas, #game .wrong:hover .blackeyedpeas { background-position: -121px calc(-121px * 19); }
 
-#game .right .killers, #game .complete .killers { background-position: 0px calc(-121px * 20); }
-#game .right:hover .killers, #game .complete:hover .killers {  background-position: -121px calc(-121px * 20); }
+#game .right .killers, #game .complete .killers, #game .wrong .killers { background-position: 0px calc(-121px * 20); }
+#game .right:hover .killers, #game .complete:hover .killers, #game .wrong:hover .killers {  background-position: -121px calc(-121px * 20); }
 
-#game .right .chapman, #game .complete .chapman { background-position: 0px calc(-121px * 21); }
-#game .right:hover .chapman, #game .complete:hover .chapman { background-position: -121px calc(-121px * 21); }
+#game .right .chapman, #game .complete .chapman, #game .wrong .chapman { background-position: 0px calc(-121px * 21); }
+#game .right:hover .chapman, #game .complete:hover .chapman, #game .wrong:hover .chapman { background-position: -121px calc(-121px * 21); }
 
-#game .right .vanillaice, #game .complete .vanillaice { background-position: 0px calc(-121px * 22); }
-#game .right:hover .vanillaice, #game .complete:hover .vanillaice { background-position: -121px calc(-121px * 22); }
+#game .right .vanillaice, #game .complete .vanillaice, #game .wrong .vanillaice { background-position: 0px calc(-121px * 22); }
+#game .right:hover .vanillaice, #game .complete:hover .vanillaice, #game .wrong:hover .vanillaice { background-position: -121px calc(-121px * 22); }
 
-#game .right .eminem, #game .complete .eminem { background-position: 0px calc(-121px * 23); }
-#game .right:hover .eminem, #game .complete:hover .eminem {  background-position: -121px calc(-121px * 23); }
+#game .right .eminem, #game .complete .eminem, #game .wrong .eminem { background-position: 0px calc(-121px * 23); }
+#game .right:hover .eminem, #game .complete:hover .eminem, #game .wrong:hover .eminem {  background-position: -121px calc(-121px * 23); }
 
-#game .right .bieber, #game .complete .bieber { background-position: 0px calc(-121px * 24); }
-#game .right:hover .bieber, #game .complete:hover .bieber { background-position: -121px calc(-121px * 24); }
+#game .right .bieber, #game .complete .bieber, #game .wrong .bieber { background-position: 0px calc(-121px * 24); }
+#game .right:hover .bieber, #game .complete:hover .bieber, #game .wrong:hover .bieber { background-position: -121px calc(-121px * 24); }
 
-#game .right .elvis, #game .complete .elvis { background-position: 0px calc(-121px * 25); }
-#game .right:hover .elvis, #game .complete:hover .elvis {  background-position: -121px calc(-121px * 25); }
+#game .right .elvis, #game .complete .elvis, #game .wrong .elvis { background-position: 0px calc(-121px * 25); }
+#game .right:hover .elvis, #game .complete:hover .elvis, #game .wrong:hover .elvis {  background-position: -121px calc(-121px * 25); }
 
-#game .right .aliciakeys, #game .complete .aliciakeys { background-position: 0px calc(-121px * 26); }
-#game .right:hover .aliciakeys, #game .complete:hover .aliciakeys {  background-position: -121px calc(-121px * 26); }
+#game .right .aliciakeys, #game .complete .aliciakeys, #game .wrong .aliciakeys { background-position: 0px calc(-121px * 26); }
+#game .right:hover .aliciakeys, #game .complete:hover .aliciakeys, #game .wrong:hover .aliciakeys {  background-position: -121px calc(-121px * 26); }
 
-#game .right .lana, #game .complete .lana { background-position: 0px calc(-121px * 27); }
-#game .right:hover .lana, #game .complete:hover .lana {  background-position: -121px calc(-121px * 27); }
+#game .right .lana, #game .complete .lana, #game .wrong .lana { background-position: 0px calc(-121px * 27); }
+#game .right:hover .lana, #game .complete:hover .lana, #game .wrong:hover .lana {  background-position: -121px calc(-121px * 27); }
 
-#game .right .50cent, #game .complete .50cent { background-position: 0px calc(-121px * 28); }
-#game .right:hover .50cent, #game .complete:hover .50cent {  background-position: -121px calc(-121px * 28); }
+#game .right .50cent, #game .complete .50cent, #game .wrong .50cent { background-position: 0px calc(-121px * 28); }
+#game .right:hover .50cent, #game .complete:hover .50cent, #game .wrong:hover .50cent {  background-position: -121px calc(-121px * 28); }
 
-#game .right .adele, #game .complete .adele { background-position: 0px calc(-121px * 29); }
-#game .right:hover .adele, #game .complete:hover .adele {  background-position: -121px calc(-121px * 29); }
+#game .right .adele, #game .complete .adele, #game .wrong .adele { background-position: 0px calc(-121px * 29); }
+#game .right:hover .adele, #game .complete:hover .adele, #game .wrong:hover .adele {  background-position: -121px calc(-121px * 29); }
 
-#game .right .beyonce, #game .complete .beyonce { background-position: 0px calc(-121px * 30); }
-#game .right:hover .beyonce, #game .complete:hover .beyonce { background-position: -121px calc(-121px * 30); }
+#game .right .beyonce, #game .complete .beyonce, #game .wrong .beyonce { background-position: 0px calc(-121px * 30); }
+#game .right:hover .beyonce, #game .complete:hover .beyonce, #game .wrong:hover .beyonce { background-position: -121px calc(-121px * 30); }
 
-#game .right .chrisbrown, #game .complete .chrisbrown { background-position: 0px calc(-121px * 31); }
-#game .right:hover .chrisbrown, #game .complete:hover .chrisbrown { background-position: -121px calc(-121px * 31); }
+#game .right .chrisbrown, #game .complete .chrisbrown, #game .wrong .chrisbrown { background-position: 0px calc(-121px * 31); }
+#game .right:hover .chrisbrown, #game .complete:hover .chrisbrown, #game .wrong:hover .chrisbrown { background-position: -121px calc(-121px * 31); }
 
-#game .right .laroux, #game .complete .laroux { background-position: 0px calc(-121px * 32); }
-#game .right:hover .laroux, #game .complete:hover .laroux { background-position: -121px calc(-121px * 32); }
+#game .right .laroux, #game .complete .laroux, #game .wrong .laroux { background-position: 0px calc(-121px * 32); }
+#game .right:hover .laroux, #game .complete:hover .laroux, #game .wrong:hover .laroux { background-position: -121px calc(-121px * 32); }
 
-#game .right .moby, #game .complete .moby { background-position: 0px calc(-121px * 33); }
-#game .right:hover .moby, #game .complete:hover .moby { background-position: -121px calc(-121px * 33); }
+#game .right .moby, #game .complete .moby, #game .wrong .moby { background-position: 0px calc(-121px * 33); }
+#game .right:hover .moby, #game .complete:hover .moby, #game .wrong:hover .moby { background-position: -121px calc(-121px * 33); }
 
-#game .right .rihanna, #game .complete .rihanna { background-position: 0px calc(-121px * 34); }
-#game .right:hover .rihanna, #game .complete:hover .rihanna { background-position: -121px calc(-121px * 34); }
+#game .right .rihanna, #game .complete .rihanna, #game .wrong .rihanna { background-position: 0px calc(-121px * 34); }
+#game .right:hover .rihanna, #game .complete:hover .rihanna, #game .wrong:hover .rihanna { background-position: -121px calc(-121px * 34); }
 
-#game .right .shakira, #game .complete .shakira { background-position: 0px calc(-121px * 35); }
-#game .right:hover .shakira, #game .complete:hover .shakira { background-position: -121px calc(-121px * 35); }
+#game .right .shakira, #game .complete .shakira, #game .wrong .shakira { background-position: 0px calc(-121px * 35); }
+#game .right:hover .shakira, #game .complete:hover .shakira, #game .wrong:hover .shakira { background-position: -121px calc(-121px * 35); }
 
-#game .right .tupac, #game .complete .tupac { background-position: 0px calc(-121px * 36); }
-#game .right:hover .tupac, #game .complete:hover .tupac { background-position: -121px calc(-121px * 36); }
+#game .right .tupac, #game .complete .tupac, #game .wrong .tupac { background-position: 0px calc(-121px * 36); }
+#game .right:hover .tupac, #game .complete:hover .tupac, #game .wrong:hover .tupac { background-position: -121px calc(-121px * 36); }
 
-#game .right .usher, #game .complete .usher { background-position: 0px calc(-121px * 37); }
-#game .right:hover .usher, #game .complete:hover .usher { background-position: -121px calc(-121px * 37); }
+#game .right .usher, #game .complete .usher, #game .wrong .usher { background-position: 0px calc(-121px * 37); }
+#game .right:hover .usher, #game .complete:hover .usher, #game .wrong:hover .usher { background-position: -121px calc(-121px * 37); }
 
 
 /*
