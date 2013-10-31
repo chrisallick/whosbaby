@@ -266,7 +266,7 @@ $(document).ready(function() {
 	}
 
 	cp = new ClipPlayer( clips, answers, function(){
-		console.log("all loaded");
+		//console.log("all loaded");
 	});
 
 	$("#game .button").click(function() {
