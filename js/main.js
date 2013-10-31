@@ -125,7 +125,16 @@ ClipPlayer = function( _clips, _answers, _onLoad ) {
     this.load = function() {
     	for( var i = 0, len = self.clips.length; i < len; i++ ) {
     		self.audioClips[i] = {};
-    		self.audioClips[i]["clip"] = new Audio('./audio/' + self.clips[i] + '.mp3');
+    		self.audioClips[i]["clip"] = new Audio();
+    		if (self.audioClips[i]["clip"].canPlayType('audio/mpeg;')) {
+    			self.audioClips[i]["clip"].src = './audio/' + self.clips[i] + '.mp3';
+    		} else {
+    			self.audioClips[i]["clip"].src = './audio/' + self.clips[i] + '.ogg';		
+    		}
+    		
+
+    		//self.audioClips[i]["clip"] = new Audio('./audio/' + self.clips[i] + '.ogg');
+    		
     		self.audioClips[i]["tried"] = false;
     		self.audioClips[i]["answer"] = self.answers[i];
 
