@@ -313,6 +313,7 @@ $(document).ready(function() {
 	});
 
 	$("#answer").submit(function(event) {
+		$("#guess").blur();
 		if( currentSong != -1 && cp.audioClips[currentSong]["tried"] == false ) {
 			if( cp.audioClips[currentSong]["answer"].indexOf($("#guess").val().toLowerCase()) >= 0 ) {
 				rightAnswer();

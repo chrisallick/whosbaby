@@ -221,3 +221,7 @@ body { -webkit-box-shadow: inset #FD7173 0 0 0 10px; }
 #gameover .playshare .share .links .no-margin { margin-right: 0px; }
 
 #gameover .playshare .playagain { margin-right: 20px; }
+
+@media only screen and (max-width:650px) {
+	#logo { padding-top: 120px; }
+}
