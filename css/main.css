@@ -40,6 +40,7 @@ body { -webkit-box-shadow: inset #FD7173 0 0 0 10px; }
 
 #game .wrong { background-position: calc(-142px * 2) calc(-142px * 2); }
 #game .wrong.crying { background-position: calc(-142px * 1) calc(-142px * 2); }
+#game .wrong.crying:hover { background-position: calc(-142px * 1) calc(-142px * 2); }
 #game .wrong:hover { background-position: calc(-142px * 0) calc(-142px * 3); }
 #game .wrong:active { background-position: calc(-142px * 1) calc(-142px * 3); }
 
@@ -56,7 +57,7 @@ body { -webkit-box-shadow: inset #FD7173 0 0 0 10px; }
 #game .three { left: -webkit-calc((142px + 17px) * 2); }
 
 #game .right .artist, #game .complete .artist, #game .wrong .artist { width: 121px; height: 121px; background: url("../img/artists.png") top left no-repeat; background-size: 200% 3800%; background-position: 0px 0px; position: absolute; bottom: 20px; left: 21px; opacity: 0; }
-#game .right:hover .artist, #game .complete:hover .artist, #game .wrong:hover .artist { background-position: -121px 0px; left: 18px; }
+#game .right:hover .artist, #game .complete:hover .artist, #game .wrong:hover .artist { background-position: -121px 0px; left: 18px; cursor: url("../img/pointer.png") 14 1, pointer; }
 #game .right:active .artist, #game .complete:active .artist, #game .wrong:active .artist { bottom: 7px; left: 6px; }
 
 /*
