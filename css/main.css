@@ -1,5 +1,6 @@
-html, body { width: 100%; height: 100%; overflow: hidden; background: #D3FFF4; }
-body { -webkit-box-shadow: inset #FD7173 0 0 0 10px; }
+html, body { width: 100%; height: 100%; /*overflow: hidden;*/ background: #D3FFF4; }
+/*body { -webkit-box-shadow: inset #FD7173 0 0 0 10px; }*/
+
 
 * { cursor: url("../img/arrow.png"), auto; }
 
@@ -14,17 +15,19 @@ body { -webkit-box-shadow: inset #FD7173 0 0 0 10px; }
 #social .t img { width: 37px; height: 30px; }
 #social .fb img { width: 15px; height: 30px; }
 
-#logo { width: 408px; height: 154px; padding-top: 31px; padding-bottom: 25px; width: calc(816px / 2); height: calc(309px / 2 ); margin: 0 auto; }
+#logo { width: 408px; height: 154px; padding-top: 31px; padding-bottom: 25px; width: calc(816px / 2); height: calc(309px / 2 ); margin: 0 auto;  }
 #logo img { width: 100%; height: 100%; }
 
 /*
 	GAME
 */
 
+#wrapper { height: 100%; min-height: 700px;  -webkit-box-shadow: inset #FD7173 0 0 0 10px; }
+
 #score { position: fixed; top: 18px; right: 29px; }
 #score p { color: #FF7676; font: 800 44px 'futura-pt'; }
 
-#game { width: 462px; height: 276px; margin: 0 auto; padding: 25px 0px 50px 11px; }
+#game { width: 462px; height: 276px; margin: 0 auto; padding: 25px 0px 50px 11px;  }
 #game .row { width: 100%; height: 142px;  position: relative; margin-bottom: 14px; }
 
 #game .button { cursor: url("../img/pointer.png") 14 1, pointer; position: absolute; width: 142px; height: 142px; background: url("../img/button_sprite.png") top left no-repeat; background-size: 300% 500%;  background-position: 0px 0px; }
@@ -86,7 +89,7 @@ body { -webkit-box-shadow: inset #FD7173 0 0 0 10px; }
 #game .right:hover .katy, #game .complete:hover .katy, #game .wrong:hover .katy { background-position: -121px -webkit-calc(-121px * 6); background-position: -121px calc(-121px * 6); }
 
 #game .right .ladygaga, #game .complete .ladygaga, #game .wrong .ladygaga { background-position: 0px -webkit-calc(-121px * 72); background-position: 0px calc(-121px * 7); }
-#game .right:hover .ladygaga, #game .complete:hover .ladygag, #game .wrong:hover .ladygag { background-position: -121px -webkit-calc(-121px * 7); background-position: -121px calc(-121px * 7); }
+#game .right:hover .ladygaga, #game .complete:hover .ladygaga, #game .wrong:hover .ladygaga { background-position: -121px -webkit-calc(-121px * 7); background-position: -121px calc(-121px * 7); }
 
 #game .right .mariah, #game .complete .mariah, #game .wrong .mariah { background-position: 0px -webkit-calc(-121px * 8); background-position: 0px calc(-121px * 8); }
 #game .right:hover .mariah, #game .complete:hover .mariah, #game .wrong:hover .mariah { background-position: -121px -webkit-calc(-121px * 8); background-position: -121px calc(-121px * 8); }
@@ -183,7 +186,7 @@ body { -webkit-box-shadow: inset #FD7173 0 0 0 10px; }
 	ANSWER INPUT
 */
 
-#answer { position: relative; width: 450px; height: 56px; margin: 0 auto; background-color: #FD7779; box-sizing: border-box; }
+#answer { position: relative; width: 450px; height: 56px; margin: 0 auto; background-color: #FD7779; box-sizing: border-box;  }
 #answer input { background-color: #FBF7BE; display: block; width: 218px; height: 30px; box-sizing: conent-box; font: 700 16px "futura-pt"; text-transform: uppercase; color: rgba(253,119,121,1); text-align: center; outline: none; border: none; position: absolute; top: 13px; left: 13px; }
 #answer input::-webkit-input-placeholder { color: rgba(253,119,121,1); }
 #answer input.blink { border: 5px solid #56C2D2; top: 8px; left: 8px; }
