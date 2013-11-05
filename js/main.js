@@ -243,7 +243,7 @@ function checkScore() {
 
 	if( tries == 6) {
 		$("#answer").fadeOut(function(){
-			if( score < 6 ) {
+			if( score < 3 ) {
 				$("#gameover .won").hide();
 				$("#gameover .lost").show();
 			}
