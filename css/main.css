@@ -80,7 +80,7 @@ html, body { width: 100%; height: 100%; /*overflow: hidden;*/ background: #D3FFF
 #game .right:hover .efergie, #game .complete:hover .fergie, #game .wrong:hover .fergie { background-position: -121px -webkit-calc(-121px * 3); background-position: -121px calc(-121px * 3); }
 
 #game .right .jayz, #game .complete .jayz, #game .wrong .jayz { background-position: 0px -webkit-calc(-121px * 4); background-position: 0px calc(-121px * 4); }
-#game .right:hover .jay, #game .complete:hover .jayz, #game .wrong:hover .jayz { background-position: -121px -webkit-calc(-121px * 4); background-position: -121px calc(-121px * 4); }
+#game .right:hover .jayz, #game .complete:hover .jayz, #game .wrong:hover .jayz { background-position: -121px -webkit-calc(-121px * 4); background-position: -121px calc(-121px * 4); }
 
 #game .right .timberlake, #game .complete .timberlake, #game .wrong .timberlake { background-position: 0px -webkit-calc(-121px * 5); background-position: 0px calc(-121px * 5); }
 #game .right:hover .timberlake, #game .complete:hover .timberlake, #game .wrong:hover .timberlake {background-position: -121px -webkit-calc(-121px * 5);  background-position: -121px calc(-121px * 5); }
