@@ -301,7 +301,7 @@ $(document).ready(function() {
 		}
 	});	
 
-	$("#guess").click(function() {
+	$("#guess").focus(function(){
 		playing = 0;
 		if( currentSong != -1 ) {
 			$(this).val("");
