@@ -198,6 +198,7 @@ function blinkGuess() {
 	if( blinkCount > 6 ) {
 		$("#guess").removeClass("blink").addClass("active");
 		blinkCount = 0;
+		$("#guess").focus();
 	} else {
 		if( blinkCount % 2 == 0 ) {
 			$("#guess").addClass("blink");
@@ -302,8 +303,8 @@ $(document).ready(function() {
 	});	
 
 	$("#guess").focus(function(){
-		playing = 0;
-		if( currentSong != -1 ) {
+		//playing = 0;
+		if( $(this).val() == "GUESS ARTIST NAME" ) {
 			$(this).val("");
 		}
 	}).blur(function() {
