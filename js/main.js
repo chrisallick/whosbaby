@@ -78,7 +78,7 @@ var all_answers = [
 	["haddaway"],
 	["janet", "janet jackson"],
 	["jayz", "jay-z", "jay z", "jay"],
-	["bieber", "justin bieber"],
+	["bieber", "justin bieber", "justin beiber"],
 	["timberlake", "justin timberlake", "justin"],
 	["katy", "katy perry"],
 	["kingsofleon", "kings of leon", "kings of leon"],
