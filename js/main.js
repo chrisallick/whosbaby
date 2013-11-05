@@ -324,7 +324,8 @@ $(document).ready(function() {
 		if( !justTried ) {
 			justTried = true;
 			wrongAnswer();
-			checkScore();	
+			checkScore();
+			$("#guess").val("GUESS ARTIST NAME");
 		}
 		
 	});
