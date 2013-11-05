@@ -306,6 +306,10 @@ $(document).ready(function() {
 		if( currentSong != -1 ) {
 			$(this).val("");
 		}
+	}).blur(function() {
+		if($(this).val() == "" ) {
+			$(this).val("GUESS ARTIST NAME");
+		}
 	});
 
 	$("#enter").click(function(){
