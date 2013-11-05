@@ -163,15 +163,15 @@ function blinkMouth() {
 	clearTimeout( t );
 	blinkCount++;
 	if( blinkCount > 4 ) {
-		$(".right").removeClass("blink right").addClass("complete");
+		$(".active").removeClass("open");
 		blinkCount = 0;
 	} else {
 		if( blinkCount % 2 == 0 ) {
-			$(".right").addClass("blink");
+			$(".active").removeClass("close").addClass("open");
 		} else {
-			$(".right").removeClass("blink");
+			$(".active").removeClass("open").addClass("close");
 		}
-		setTimeout( blinkMouth, 100 );
+		setTimeout( blinkMouth, 180 );
 	}
 }
 
@@ -291,6 +291,8 @@ $(document).ready(function() {
 
 				$(".active").removeClass("active");
 				$(this).addClass("active");
+
+				blinkMouth();
 			} else if( cp.audioClips[index]["tried"] == true ) {
 				blinkAfter = false;
 				cp.play( index );

@@ -40,6 +40,8 @@ html, body { width: 100%; height: 100%; /*overflow: hidden;*/ background: #D3FFF
 #game .active.open { background-position: -webkit-calc(-142px * 2) -webkit-calc(-142px * 1); background-position: calc(-142px * 2) calc(-142px * 1); }
 #game .active.close { background-position: -webkit-calc(-142px * 0) -webkit-calc(-142px * 2); background-position: calc(-142px * 0) calc(-142px * 2); }
 #game .active:active { background-position: -webkit-calc(-142px * 2) -webkit-calc(-142px * 0); background-position: calc(-142px * 2) calc(-142px * 0); }
+#game .active.open { background-position: -webkit-calc(-142px * 2) -webkit-calc(-142px * 1); background-position: calc(-142px * 2) calc(-142px * 1); }
+#game .active.close { background-position: -webkit-calc(-142px * 0) -webkit-calc(-142px * 2); background-position: calc(-142px * 0) calc(-142px * 2); }
 
 #game .wrong { background-position: -webkit-calc(-142px * 2) -webkit-calc(-142px * 2); background-position: calc(-142px * 2) calc(-142px * 2); }
 #game .wrong.crying { background-position: -webkit-calc(-142px * 1) -webkit-calc(-142px * 2); background-position: calc(-142px * 1) calc(-142px * 2); }
