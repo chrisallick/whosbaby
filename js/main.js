@@ -341,5 +341,5 @@ $(document).ready(function() {
 	$(".playshare .playagain").click(function(event){
 		event.preventDefault();
 		location.reload();
-	})
+	});
 });

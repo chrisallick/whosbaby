@@ -191,7 +191,7 @@ html, body { width: 100%; height: 100%; /*overflow: hidden;*/ background: #D3FFF
 #answer { position: relative; width: 450px; height: 56px; margin: 0 auto; background-color: #FD7779; box-sizing: border-box;  }
 #answer input { background-color: #fdfad9; display: block; width: 218px; height: 30px; box-sizing: conent-box; font: 700 16px "futura-pt"; text-transform: uppercase; color: rgba(253,119,121,1); text-align: center; outline: none; border: none; position: absolute; top: 13px; left: 13px; }
 #answer input::-webkit-input-placeholder { color: rgba(253,119,121,1); }
-#answer input.blink { border: 5px solid #56C2D2; top: 8px; left: 8px; }
+#answer input.blink { /*border: 5px solid #56C2D2; top: 8px; left: 8px;*/ background-color: #62d4e7; }
 #answer input.active { border: 5px solid #56C2D2; top: 8px; left: 8px; }
 
 #answer .button { position: absolute; top: 7px; left: 0px; height: 37px; width: 96px; cursor: url("../img/pointer.png") 14 1, pointer; background: url("../img/answer_sprite.png") top left no-repeat; background-size: 300% 200%; }
