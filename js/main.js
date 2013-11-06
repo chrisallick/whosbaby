@@ -276,6 +276,12 @@ $(document).ready(function() {
 		$("#volume").fadeOut();
 	});
 
+	$("#info-icon").click(function(){
+		$("#game").hide();
+		$("#answer").hide();
+		$("#info").show();
+	})
+
 	$("#game .button").click(function() {
 		if( !$(this).hasClass("right") ) {
 			var index = $(this).attr("id");
