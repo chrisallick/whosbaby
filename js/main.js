@@ -283,7 +283,7 @@ $(document).ready(function() {
 
 	$("#info-icon").click(function(){
 		if( $("#info").css("display") == "none" ) {
-			$("#info iframe").attr("src","http://www.youtube.com/embed/g4qgW7_RnL");
+			$("#info iframe").attr("src","http://www.youtube.com/embed/g4qgW7_RnLo");
 			$("#game").hide();
 			$("#answer").hide();
 			$("#info").show();
