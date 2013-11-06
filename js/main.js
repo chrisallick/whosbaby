@@ -273,8 +273,13 @@ $(document).ready(function() {
 	}
 
 	cp = new ClipPlayer( clips, answers, function(){
-		$("#volume").fadeOut();
+		
 	});
+
+	setTimeout(function(){
+		$("#volume").fadeOut();	
+	}, 2000 );
+	
 
 	$("#info-icon").click(function(){
 		if( $("#info").css("display") == "none" ) {
