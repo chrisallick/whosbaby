@@ -277,10 +277,22 @@ $(document).ready(function() {
 	});
 
 	$("#info-icon").click(function(){
-		$("#game").hide();
-		$("#answer").hide();
-		$("#info").show();
-	})
+		if( $("#info").css("display") == "none" ) {
+			$("#game").hide();
+			$("#answer").hide();
+			$("#info").show();
+			$(".info", this).hide();
+			$(".x", this).show();
+			$(this).css("right",30);
+		} else {
+			$("#game").show();
+			$("#answer").show();
+			$("#info").hide();
+			$(".info", this).show();
+			$(".x", this).hide();
+			$(this).css("right",40);
+		}
+	});
 
 	$("#game .button").click(function() {
 		if( !$(this).hasClass("right") ) {
