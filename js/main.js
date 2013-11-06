@@ -278,7 +278,7 @@ $(document).ready(function() {
 
 	setTimeout(function(){
 		$("#volume").fadeOut();	
-	}, 2000 );
+	}, 2300 );
 	
 
 	$("#info-icon").click(function(){
