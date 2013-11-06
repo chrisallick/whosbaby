@@ -29,7 +29,7 @@ html, body { width: 100%; height: 100%; /*overflow: hidden;*/ background: #D3FFF
 #info-icon .x { width: 30px; height: 30px; display: none; }
 
 #info { display: none; text-align: center; }
-#info iframe { margin-bottom: 20px;  }
+#info iframe { margin-bottom: 20px; }
 #info p { text-align: center; font: 800 24px "futura-pt"; color: #ff6969; }
 #info p a { color: #ff6969; cursor: url("../img/pointer.png") 14 1, pointer; }
 

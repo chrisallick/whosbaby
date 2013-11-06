@@ -278,6 +278,7 @@ $(document).ready(function() {
 
 	$("#info-icon").click(function(){
 		if( $("#info").css("display") == "none" ) {
+			$("#info iframe").attr("src","http://www.youtube.com/embed/IWSblVcCzZs");
 			$("#game").hide();
 			$("#answer").hide();
 			$("#info").show();
@@ -288,6 +289,7 @@ $(document).ready(function() {
 			$("#game").show();
 			$("#answer").show();
 			$("#info").hide();
+			$("#info iframe").attr("src","");
 			$(".info", this).show();
 			$(".x", this).hide();
 			$(this).css("right",40);
