@@ -88,7 +88,7 @@ var all_answers = [
 	["lana", "lana del rey", "lana delray"],
 	["laroux", "la roux", "larou", "la rou"],
 	["mariah", "mariah carey", "mariah carrey"],
-	["mariah", "mariah carey"],
+	["mariah", "mariah carey", "mariah carrey"],
 	["jackson", "michael jackson"],
 	["moby"],
 	["nodoubt", "no doubt"],
@@ -132,9 +132,6 @@ ClipPlayer = function( _clips, _answers, _onLoad ) {
     			self.audioClips[i]["clip"].src = './audio/' + self.clips[i] + '.ogg';		
     		}
     		
-
-    		//self.audioClips[i]["clip"] = new Audio('./audio/' + self.clips[i] + '.ogg');
-    		
     		self.audioClips[i]["tried"] = false;
     		self.audioClips[i]["answer"] = self.answers[i];
 
@@ -164,7 +161,6 @@ function blinkMouth() {
 	blinkCount++;
 	if( blinkCount > 4 ) {
 		$(".active").removeClass("open");
-		console.log("ASDF");
 		blinkCount = 0;
 	} else {
 		if( blinkCount % 2 == 0 ) {
@@ -277,7 +273,7 @@ $(document).ready(function() {
 	}
 
 	cp = new ClipPlayer( clips, answers, function(){
-		//console.log("all loaded");
+		$("#volume").fadeOut();
 	});
 
 	$("#game .button").click(function() {
