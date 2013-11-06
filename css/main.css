@@ -23,6 +23,7 @@ html, body { width: 100%; height: 100%; /*overflow: hidden;*/ background: #D3FFF
 */
 
 #info-icon { position: fixed; bottom: 30px; right: 40px; }
+#info-icon:hover { opacity: .6; }
 #info-icon img { cursor: url("../img/pointer.png") 14 1, pointer; }
 #info-icon .info { width: 13px; height: 30px; }
 #info-icon .x { width: 30px; height: 30px; display: none; }
